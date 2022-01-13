@@ -32,9 +32,10 @@ public class Estado : ImmediateModeShapeDrawer
 
     public bool inside;
 
-    private Vector3 linha1;
-    private Vector3 linha2;
-    private Vector3 linha3;
+    private Polyline linha;
+
+    private Vector3 distanceToDisplay = new Vector3();
+
     public void OnPointerDown()
     {
         _onPress.Invoke();
@@ -89,19 +90,33 @@ public class Estado : ImmediateModeShapeDrawer
         image.color = normalColor;
 
         nome = transform.parent.gameObject.name;
-        for(int i = 0; i < transform.parent.childCount; i++)
+        for (int i = 0; i < transform.parent.childCount; i++)
         {
             sprites.Add(transform.parent.GetChild(i));
         }
+
+        linha = transform.parent.gameObject.GetComponent<Polyline>();
+        linha.SortingOrder = -3;
+        distanceToDisplay = transform.position - manager.displayPos.position;
+        if(nome == "RS")
+        {
+            Debug.Log(manager.displayPos.position.ToString() + " displayPos");
+            Debug.Log(transform.position.ToString() + " " + nome);
+            Debug.Log(distanceToDisplay);
+        }
+        linha.SetPointPosition(0, new Vector3(0, 0));
+        linha.SetPointPosition(1, new Vector3(distanceToDisplay.x, 0));
+        linha.SetPointPosition(2, new Vector3(distanceToDisplay.x, distanceToDisplay.y));
+        linha.SetPointPosition(3, new Vector3(distanceToDisplay.x + 0.5f, distanceToDisplay.y));
     }
 
-    public override void DrawShapes(Camera cam)
-    {
-        using (Draw.Command(cam))
-        {
-            Draw.Line(transform.position, transform.position + Vector3.right * 5f, 0.1f, Color.white, Color.white); // Drawing happens here
-        }
-    }
+    //public override void DrawShapes(Camera cam)
+    //{
+    //    using (Draw.Command(cam))
+    //    {
+    //        Draw.Line(transform.position, transform.position + Vector3.right * 5f, 0.1f, Color.white, Color.white); // Drawing happens here
+    //    }
+    //}
 
     private void ScaleAll(Vector3 tamanho, float tempo)
     {
@@ -129,7 +144,7 @@ public class Estado : ImmediateModeShapeDrawer
     {
         foreach (Transform t in sprites)
         {
-            if(t.gameObject.name == "3D")
+            if (t.gameObject.name == "3D")
             {
                 t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
             }

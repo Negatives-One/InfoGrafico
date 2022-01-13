@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour
     public List<Estado> estados = new List<Estado>();
 
     [SerializeField] private float zOffSet = 0;
+    [SerializeField] public Transform displayPos;
 
     private void Start()
     {
