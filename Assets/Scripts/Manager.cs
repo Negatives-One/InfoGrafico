@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
     private void Start()
     {
         Transform brasil = GameObject.Find("Brasil").transform;
-        for (int i = 0; i < brasil.childCount - 1; i++)
+        for (int i = 0; i < brasil.childCount - 2; i++)
         {
             estados.Add(brasil.GetChild(i).GetChild(0).gameObject.GetComponent<Estado>());
         }
