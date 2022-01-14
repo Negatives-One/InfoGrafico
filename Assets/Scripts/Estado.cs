@@ -37,6 +37,10 @@ public class Estado : ImmediateModeShapeDrawer
     private Polyline linha;
 
     private Vector3 distanceToDisplay = new Vector3();
+    private float offSet = 0f;
+    private float offSetMax = 0.3f;
+
+    private float stepTime = 0.3f;
 
     public void OnPointerDown()
     {
@@ -61,6 +65,7 @@ public class Estado : ImmediateModeShapeDrawer
         HighPriority();
         manager.DeactiveExcept(nome);
         Debug.Log("Enter");
+        Go();
     }
 
     public void OnPointerExit()
@@ -71,6 +76,7 @@ public class Estado : ImmediateModeShapeDrawer
         LowPriority();
         manager.ActiveExcept(nome);
         Debug.Log("Exit");
+        Return();
     }
     private void Awake()
     {
@@ -134,19 +140,46 @@ public class Estado : ImmediateModeShapeDrawer
 
         linha = transform.parent.gameObject.GetComponent<Polyline>();
         linha.SortingOrder = -3;
-        distanceToDisplay = transform.position - manager.displayPos.position;
-        if (nome == "RS")
-        {
-            Debug.Log(manager.displayPos.position.ToString() + " displayPos");
-            Debug.Log(transform.position.ToString() + " " + nome);
-            Debug.Log(distanceToDisplay);
-        }
+        linha.Thickness = 0.1f;
+    }
+
+    void Update()
+    {
+        //distanceToDisplay = manager.displayPos.localPosition - transform.parent.localPosition;
+
         linha.SetPointPosition(0, new Vector3(0, 0));
         linha.SetPointPosition(1, new Vector3(distanceToDisplay.x, 0));
         linha.SetPointPosition(2, new Vector3(distanceToDisplay.x, distanceToDisplay.y));
-        linha.SetPointPosition(3, new Vector3(distanceToDisplay.x + 0.5f, distanceToDisplay.y));
-        Load();
+        linha.SetPointPosition(3, new Vector3(distanceToDisplay.x + offSet, distanceToDisplay.y));
 
+    }
+
+    void Return()
+    {
+        Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(DOTween.To(() => offSet, x => offSet = x, 0.05f, stepTime));
+        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(distanceToDisplay.x, 0.05f, 0f), stepTime));
+        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(0.05f, 0.05f, 0f), stepTime));
+        mySequence.OnComplete(() => Reset());
+        mySequence.Play();
+    }
+
+    void Go()
+    {
+        Vector3 targetDistance = manager.displayPos.localPosition - transform.parent.localPosition;
+        Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, 0.05f, 0f), stepTime));
+        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, targetDistance.y, 0f), stepTime));
+        mySequence.Append(DOTween.To(() => offSet, x => offSet = x, offSetMax, stepTime));
+        mySequence.Play();
+        //DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, targetDistance.y, 0), stepTime);
+        //DOTween.To(() => offSet, x => offSet = x, offSetMax, stepTime);
+    }
+
+    void Reset()
+    {
+        offSet = 0.05f;
+        distanceToDisplay = new Vector3(0.05f, 0.05f, 0f);
     }
 
     //public override void DrawShapes(Camera cam)
