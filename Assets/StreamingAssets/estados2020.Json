@@ -1,0 +1,185 @@
+
+{
+	"AC" : {
+	
+	"estadoNome": "Acre",
+	"hestadoHomicidiosFems": 31,
+	"estadoFeminicidios":12
+
+
+},
+	"AL"  : {
+	
+	"estadoNome": "Alagoas",
+	"estadoHomicidiosFem" : 97, 
+	"estadoFeminicidios":35
+
+},
+
+	"AP" : {
+	
+	"estadoNome": "Amapá",
+	"estadoHomicidiosFem":20 ,
+	"estadoFeminicidios":9
+
+},
+	"AM" : {
+	
+	"estadoNome": "Amazonas",
+	"estadoHomicidiosFem":68 ,
+	"estadoFeminicidios":16
+
+},
+
+	"BA" : {
+	
+	"estadoNome": "Bahia",
+	"estadoHomicidiosFem":440 ,
+	"estadoFeminicidios":113
+
+},
+	"CE" : {
+	
+	"estadoNome": "Ceará",
+	"estadoHomicidiosFem":329 , 
+	"estadoFeminicidios":27
+
+},
+ 	"DF" : {
+	
+	"estadoNome": "Distrito Federal",
+	"estadoHomicidiosFem":39 , 
+	"estadoFeminicidios":17
+
+},
+	"ES" : {
+	
+	"estadoNome": "Espirito Santo",
+	"estadoHomicidiosFem":128, 
+	"estadoFeminicidios":26
+
+},
+	"GO" : {
+	
+	"estadoNome": "Goiania",
+	"estadoHomicidiosFem": 	106	, 
+	"estadoFeminicidios":43
+
+},
+	"MA" : {
+	
+	"estadoNome": "Maranhão",
+	"estadoHomicidiosFem": 125, 
+	"estadoFeminicidios":65
+
+},
+	"MT" : {
+	
+	"estadoNome": "Mato Grosso",
+	"estadoHomicidiosFem": 104, 
+	"estadoFeminicidios":62
+
+},
+	"MS" : {
+	
+	"estadoNome": "Mato Grosso do Sul",
+	"estadoHomicidiosFem":111 ,
+	"estadoFeminicidios":43
+
+},
+	"MG" : {
+	
+	"estadoNome": "Minas Gerais",
+	"estadoHomicidiosFem":286, 
+	"estadoFeminicidios":148
+
+},
+	"PA" : {
+	
+	"estadoNome": "Pará",
+	"estadoHomicidiosFem":178 ,
+	"estadoFeminicidios":66
+
+},
+	"PB" : {
+	
+	"estadoNome": "Paraíba",
+	"estadoHomicidiosFem": 90,
+	"estadoFeminicidios":36
+
+},
+	"PR" : {
+	
+	"estadoNome": "Paraná",
+	"estadoHomicidiosFem":229, 
+	"estadoFeminicidios":73
+
+},
+
+	"PE" : {
+	
+	"estadoNome": "Pernambuco",
+	"estadoHomicidiosFem":228 , 
+	"estadoFeminicidios":75
+},
+	"PI" : {
+	
+	"estadoNome": "Piauí",
+	"estadoHomicidiosFem":61 , 
+	"estadoFeminicidios":31
+},
+	"RJ" : {
+	
+	"estadoNome": "Rio de Janeiro",
+	"estadoHomicidiosFem":275 , 
+	"estadoFeminicidios":78
+},
+	"RN" : {
+	
+	"estadoNome": "Rio Grande do Norte",
+	"estadoHomicidiosFem":75, 
+	"estadoFeminicidios":13
+},
+	"RS" : {
+	
+	"estadoNome": "Rio Grande do Sul",
+	"estadoHomicidiosFem":221 , 
+	"estadoFeminicidios":80
+},
+	"RO" : {
+	
+	"estadoNome": "Rondonia",
+	"estadoHomicidiosFem":57 , 
+	"estadoFeminicidios":14
+},
+	"RR" : {
+	
+	"estadoNome": "Roraima",
+	"estadoHomicidiosFem":16 , 
+	"estadoFeminicidios":9
+},
+	"SC" : {
+	
+	"estadoNome": "Santa Catarina",
+	"estadoHomicidiosFem":103 ,
+	"estadoFeminicidios":57
+},
+	"SP" : {
+	
+	"estadoNome": "São Paulo",
+	"estadoHomicidiosFem": 424, 
+	"estadoFeminicidios":179
+},
+	"SE" : {
+	
+	"estadoNome": "Sergipe",
+	"estadoHomicidiosFem": 42,
+	"estadoFeminicidios":14
+},
+	"TO" : {
+	
+	"estadoNome": "Tocantins",
+	"estadoHomicidiosFem":30 , 
+	"estadoFeminicidios":9
+},
+}

@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
 using Shapes;
+using SimpleJSON;
+using System.IO;
 
 [RequireComponent(typeof(PolygonCollider2D))]
 //[ExecuteInEditMode]
@@ -77,7 +79,42 @@ public class Estado : ImmediateModeShapeDrawer
         if (_onExit == null) { _onExit = new UnityEvent(); }
         if (_onEnter == null) { _onEnter = new UnityEvent(); }
     }
+    // Atributos do Estado 
+    [SerializeField]
+    public string estadoNome2020;
+    [SerializeField]
+    public int estadoHomicidiosFem2020;
+    [SerializeField]
+    public int estadoFeminicidios2020;
+    [SerializeField]
+    public string estadoNome2016;
+    [SerializeField]
+    public int estadoHomicidiosFem2016;
+    [SerializeField]
+    public int estadoFeminicidios2016;
+    //Sistema de carregamento do Json.
 
+    void Load()
+    {
+        string path = Application.streamingAssetsPath + "/estados2020.json";
+        string jsonString = File.ReadAllText(path);
+        JSONObject estadoJson = (JSONObject)JSON.Parse(jsonString);
+        var estadoBase = (JSONObject)JSON.Parse(estadoJson[nome].ToString());
+        estadoNome2020 = estadoBase["estadoNome"];
+        estadoHomicidiosFem2020 = estadoBase["estadoHomicidiosFem"];
+        estadoFeminicidios2020 = estadoBase["estadoFeminicidios"];
+
+        string path2 = Application.streamingAssetsPath + "/estados2016.json";
+        string jsonString2 = File.ReadAllText(path2);
+        JSONObject estadoJson2 = (JSONObject)JSON.Parse(jsonString2);
+        var estadoBase2 = (JSONObject)JSON.Parse(estadoJson2[nome].ToString());
+        estadoNome2016 = estadoBase2["estadoNome"];
+        estadoHomicidiosFem2016 = estadoBase2["estadoHomicidiosFem"];
+        estadoFeminicidios2016 = estadoBase2["estadoFeminicidios"];
+
+
+
+    }
     private void Start()
     {
         highlightSize = Vector3.one * 1.2f;
@@ -98,7 +135,7 @@ public class Estado : ImmediateModeShapeDrawer
         linha = transform.parent.gameObject.GetComponent<Polyline>();
         linha.SortingOrder = -3;
         distanceToDisplay = transform.position - manager.displayPos.position;
-        if(nome == "RS")
+        if (nome == "RS")
         {
             Debug.Log(manager.displayPos.position.ToString() + " displayPos");
             Debug.Log(transform.position.ToString() + " " + nome);
@@ -108,6 +145,8 @@ public class Estado : ImmediateModeShapeDrawer
         linha.SetPointPosition(1, new Vector3(distanceToDisplay.x, 0));
         linha.SetPointPosition(2, new Vector3(distanceToDisplay.x, distanceToDisplay.y));
         linha.SetPointPosition(3, new Vector3(distanceToDisplay.x + 0.5f, distanceToDisplay.y));
+        Load();
+
     }
 
     //public override void DrawShapes(Camera cam)
