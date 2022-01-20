@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -4752,7 +4752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -5148,7 +5148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -6786,7 +6786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -6921,7 +6921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -7186,7 +7186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -8559,7 +8559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -10955,7 +10955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -11766,7 +11766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -11983,7 +11983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -13488,7 +13488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -13916,7 +13916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -14398,7 +14398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -14697,7 +14697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -14832,7 +14832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -14967,7 +14967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -15592,7 +15592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -15908,7 +15908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -16125,7 +16125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -16342,7 +16342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -16477,7 +16477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -16965,7 +16965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -17100,7 +17100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -17821,7 +17821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -18658,7 +18658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -18875,7 +18875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 1}
+  color: {r: 0.9607843, g: 0.9372549, b: 0.92941177, a: 0}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
