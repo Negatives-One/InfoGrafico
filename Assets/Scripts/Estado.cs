@@ -35,48 +35,71 @@ public class Estado : ImmediateModeShapeDrawer
     public bool inside;
 
     private Polyline linha;
+    private Rectangle rect;
+
+    private Vector2 rectSize = new Vector2();
+    private Vector2 textBoxSize = new Vector2(5f, 3.5f);
 
     private Vector3 distanceToDisplay = new Vector3();
     private float offSet = 0f;
     private float offSetMax = 0.3f;
 
-    private float stepTime = 0.3f;
+    private float stepTime = 0.15f;
+
+    private Sequence returnSequence;
+    private Sequence goSequence;
+    private Sequence runningSequence;
+
+    public bool goEnded = false;
+    public bool returnEnded = false;
+
+    public bool isInside = false;
+
+    private Color cor = new Color(1f, 1f, 1f);
 
     public void OnPointerDown()
     {
         _onPress.Invoke();
-        image.color = pressedColor;
+        //image.color = pressedColor;
         Debug.Log("Press");
     }
 
     public void OnPointerUp()
     {
         _onRelease.Invoke();
-        image.color = highlightedColor;
+        //image.color = highlightedColor;
         Debug.Log("Release");
     }
 
     public void OnPointerEnter()
     {
-        inside = true;
-        image.color = highlightedColor;
-        manager.ChangeSelected(this);
-        ScaleAll(highlightSize, 0.5f);
-        HighPriority();
-        manager.DeactiveExcept(nome);
-        Debug.Log("Enter");
-        Go();
+        if (!manager.geralMapa)
+        {
+            inside = true;
+            image.color = highlightedColor;
+            manager.ChangeSelected(this);
+            ScaleAll(highlightSize, 0.5f);
+            HighPriority();
+            manager.DeactiveExcept(nome);
+            Debug.Log("Enter");
+
+            Go();
+        }
     }
 
     public void OnPointerExit()
     {
-        inside = false;
-        image.color = normalColor;
-        ScaleAll(normalSize, 0.5f);
-        LowPriority();
-        manager.ActiveExcept(nome);
-        Debug.Log("Exit");
-        Return();
+        if (!manager.geralMapa)
+        {
+            inside = false;
+            image.color = normalColor;
+            ScaleAll(normalSize, 0.5f);
+            LowPriority();
+            manager.ActiveExcept(nome);
+            Debug.Log("Exit");
+
+            Return();
+        }
     }
     private void Awake()
     {
@@ -118,8 +141,6 @@ public class Estado : ImmediateModeShapeDrawer
         estadoHomicidiosFem2016 = estadoBase2["estadoHomicidiosFem"];
         estadoFeminicidios2016 = estadoBase2["estadoFeminicidios"];
 
-
-
     }
     private void Start()
     {
@@ -141,6 +162,22 @@ public class Estado : ImmediateModeShapeDrawer
         linha = transform.parent.gameObject.GetComponent<Polyline>();
         linha.SortingOrder = -3;
         linha.Thickness = 0.1f;
+        linha.Color = Color.white;
+        for(int p = 0; p < linha.points.Count; p++)
+        {
+            linha.points[p] = new PolylinePoint(linha.points[p].point, Color.white, linha.points[p].thickness - 0.1f) ;
+        }
+        Reiniciar();
+        Load();
+
+        rect = gameObject.transform.parent.GetChild(3).gameObject.GetComponent<Rectangle>();
+        rect.gameObject.transform.position += (manager.displayPos.position - transform.parent.position) + Vector3.right * offSetMax;
+        rect.gameObject.transform.position += Vector3.up * 0.06f;
+        rect.SortingOrder = 20;
+        rect.Color = new Color(1f, 1f, 1f, 0f);
+        rect.Type = Rectangle.RectangleType.RoundedSolid;
+        rect.CornerRadiusMode = Rectangle.RectangleCornerRadiusMode.PerCorner;
+        rect.CornerRadii = new Vector4(0f, 0.25f, 0.25f, 0.25f);
     }
 
     void Update()
@@ -152,34 +189,58 @@ public class Estado : ImmediateModeShapeDrawer
         linha.SetPointPosition(2, new Vector3(distanceToDisplay.x, distanceToDisplay.y));
         linha.SetPointPosition(3, new Vector3(distanceToDisplay.x + offSet, distanceToDisplay.y));
 
+        sprites[0].gameObject.GetComponent<SpriteRenderer>().color = cor;
+        sprites[2].gameObject.GetComponent<SpriteRenderer>().color = cor;
+
+        rect.Width = rectSize.x;
+        rect.Height = rectSize.y;
     }
 
     void Return()
     {
-        Sequence mySequence = DOTween.Sequence();
-        mySequence.Append(DOTween.To(() => offSet, x => offSet = x, 0.05f, stepTime));
-        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(distanceToDisplay.x, 0.05f, 0f), stepTime));
-        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(0.05f, 0.05f, 0f), stepTime));
-        mySequence.OnComplete(() => Reset());
-        mySequence.Play();
+        goSequence.Kill();
+        returnEnded = false;
+        returnSequence = DOTween.Sequence();
+        returnSequence.Append(DOTween.To(() => manager.informacao.transparency, x => manager.informacao.transparency = x, 0f, stepTime));
+        returnSequence.Append(DOTween.To(() => rectSize, x => rectSize = x, Vector2.zero, stepTime));
+        returnSequence.Append(DOTween.To(() => offSet, x => offSet = x, 0.05f, stepTime));
+        returnSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(distanceToDisplay.x, 0.05f, 0f), stepTime));
+        returnSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(0.05f, 0.05f, 0f), stepTime));
+        //manager.returnSequence.OnComplete(() => Reiniciar());
+        returnSequence.OnComplete(() => returnEnded = true);
+        returnSequence.OnComplete(() => rect.Color = new Color(1f, 1f, 1f, 0f));
+        returnSequence.Play();
     }
 
     void Go()
     {
+        rect.Color = Color.white;
+        goEnded = false;
+        manager.DefinirEstado(estadoNome2016, estadoHomicidiosFem2016.ToString(), estadoFeminicidios2016.ToString(), estadoHomicidiosFem2020.ToString(), estadoFeminicidios2020.ToString());
+        returnSequence.Kill(false);
+        linha.Color = Color.white;
         Vector3 targetDistance = manager.displayPos.localPosition - transform.parent.localPosition;
-        Sequence mySequence = DOTween.Sequence();
-        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, 0.05f, 0f), stepTime));
-        mySequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, targetDistance.y, 0f), stepTime));
-        mySequence.Append(DOTween.To(() => offSet, x => offSet = x, offSetMax, stepTime));
-        mySequence.Play();
+
+        goSequence = DOTween.Sequence();
+        goSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, 0.05f, 0f), stepTime));
+        goSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, targetDistance.y, 0f), stepTime));
+        goSequence.Append(DOTween.To(() => offSet, x => offSet = x, offSetMax, stepTime));
+        goSequence.Append(DOTween.To(() => rectSize, x => rectSize = x, textBoxSize, stepTime));
+        goSequence.Append(DOTween.To(() => manager.informacao.transparency, x => manager.informacao.transparency = x, 1f, stepTime));
+        returnSequence.OnComplete(() => goEnded = true);
+        goSequence.Play();
+
         //DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, targetDistance.y, 0), stepTime);
         //DOTween.To(() => offSet, x => offSet = x, offSetMax, stepTime);
     }
 
-    void Reset()
+    void Reiniciar()
     {
         offSet = 0.05f;
         distanceToDisplay = new Vector3(0.05f, 0.05f, 0f);
+        linha.Color = new Color(1, 1, 1, 0);
+        //manager.rectSize = Vector2.zero;
+        manager.informacao.transparency = 0f;
     }
 
     //public override void DrawShapes(Camera cam)
@@ -194,17 +255,30 @@ public class Estado : ImmediateModeShapeDrawer
     {
         foreach (Transform t in sprites)
         {
-            t.DOScale(tamanho, tempo);
+            if (t.gameObject.name == "Rectangle")
+            {
+                continue;
+            }
+            else
+            {
+                t.DOScale(tamanho, tempo);
+            }
         }
     }
 
     private void HighPriority()
     {
+        DOTween.To(() => cor, x => cor = x, new Color(0.9333333f, 0.4509804f, 0.007843138f), stepTime);
+        linha.SortingOrder = 9;
         foreach (Transform t in sprites)
         {
             if (t.gameObject.name == "3D")
             {
                 t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 9;
+            }
+            else if (t.gameObject.name == "Rectangle")
+            {
+                continue;
             }
             else
             {
@@ -214,11 +288,17 @@ public class Estado : ImmediateModeShapeDrawer
     }
     private void LowPriority()
     {
+        DOTween.To(() => cor, x => cor = x, new Color(1f, 1f, 1f), stepTime);
+        linha.SortingOrder = -1;
         foreach (Transform t in sprites)
         {
             if (t.gameObject.name == "3D")
             {
                 t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
+            }
+            else if (t.gameObject.name == "Rectangle")
+            {
+                continue;
             }
             else
             {
@@ -231,5 +311,15 @@ public class Estado : ImmediateModeShapeDrawer
     {
         ScaleAll(normalSize, .5f);
         LowPriority();
+    }
+
+    public void ChangeColor(Color novaCor)
+    {
+        DOTween.To(() => cor, x => cor = x, novaCor, stepTime);
+    }
+
+    private void Sinalizador(string type, bool value)
+    {
+
     }
 }
