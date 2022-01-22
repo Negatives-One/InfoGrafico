@@ -39,17 +39,69 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: CESprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.50222975, y: 0.49788886}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 74
+        height: 90
       spriteID: 35c596eebfd1e244e955476cc86501f0
       internalID: 0
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 19, y: 24}
+      - {x: 16, y: 26}
+      - {x: 15, y: 28}
+      - {x: 12, y: 29}
+      - {x: 7, y: 33}
+      - {x: 0, y: 37}
+      - {x: -8, y: 41}
+      - {x: -12, y: 44}
+      - {x: -20, y: 44}
+      - {x: -33, y: 43}
+      - {x: -33, y: 40}
+      - {x: -36, y: 34}
+      - {x: -34, y: 29}
+      - {x: -33, y: 24}
+      - {x: -30, y: 18}
+      - {x: -32, y: 14}
+      - {x: -32, y: 8}
+      - {x: -30, y: 4}
+      - {x: -29, y: 0}
+      - {x: -27, y: -2}
+      - {x: -27, y: -12}
+      - {x: -23, y: -23}
+      - {x: -19.154259, y: -24.635506}
+      - {x: -18, y: -26}
+      - {x: -21, y: -34}
+      - {x: -20, y: -36}
+      - {x: -11, y: -36}
+      - {x: -8, y: -35}
+      - {x: -5, y: -36}
+      - {x: 0, y: -39}
+      - {x: 2, y: -41}
+      - {x: 6, y: -43}
+      - {x: 8, y: -42}
+      - {x: 11, y: -40}
+      - {x: 13, y: -35}
+      - {x: 12, y: -34}
+      - {x: 10, y: -29}
+      - {x: 14, y: -19}
+      - {x: 13, y: -17}
+      - {x: 16, y: -12}
+      - {x: 18, y: -13}
+      - {x: 21, y: -9}
+      - {x: 22, y: -5}
+      - {x: 25, y: -2}
+      - {x: 28, y: 5}
+      - {x: 31, y: 7}
+      - {x: 36, y: 9}
+      - {x: 35, y: 11}
+      - {x: 31, y: 12}
+      - {x: 27, y: 16}
+      - {x: 23, y: 19}

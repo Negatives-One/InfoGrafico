@@ -37,19 +37,28 @@ ScriptedImporter:
   preserveSVGImageAspect: 0
   useSVGPixelsPerUnit: 0
   spriteData:
-    TessellationDetail: 0
+    TessellationDetail: 1
     SpriteRect:
-      name: 
+      name: DFSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5079412, y: 0.51}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 17
+        height: 10
       spriteID: d9cd047d1f2464e4da10879c35981747
       internalID: 0
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 8.5, y: -5}
+      - {x: 7.5, y: -4}
+      - {x: 8.284, y: 3.055995}
+      - {x: 6.3226395, y: 4.4255695}
+      - {x: -6.6634116, y: 4.9288254}
+      - {x: -8.291036, y: -1.2116487}
+      - {x: -6.7599726, y: -4.4501123}
+      - {x: -6.092207, y: -4.741544}

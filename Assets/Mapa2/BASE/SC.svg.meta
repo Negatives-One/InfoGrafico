@@ -39,17 +39,55 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: SCSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5001562, y: 0.4970149}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 96
+        height: 67
       spriteID: 7f62324d950237f418dcca50ce1a20a4
       internalID: 0
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 44, y: 32.5}
+      - {x: 36, y: 32.5}
+      - {x: 27, y: 27.5}
+      - {x: 20, y: 31.5}
+      - {x: 9, y: 30.5}
+      - {x: 6, y: 27.5}
+      - {x: 1, y: 27.5}
+      - {x: -2, y: 24.5}
+      - {x: -1, y: 20.5}
+      - {x: -4, y: 18.5}
+      - {x: -8, y: 20.5}
+      - {x: -16, y: 20.5}
+      - {x: -19, y: 22.5}
+      - {x: -30, y: 25.5}
+      - {x: -35, y: 24.5}
+      - {x: -40, y: 26.5}
+      - {x: -44, y: 26.5}
+      - {x: -45, y: 19.5}
+      - {x: -44, y: 15.5}
+      - {x: -46, y: 11.5}
+      - {x: -33, y: 11.5}
+      - {x: -18, y: 8.5}
+      - {x: -6, y: 3.5}
+      - {x: 3, y: -3.5}
+      - {x: 11, y: -13.5}
+      - {x: 25, y: -16.5}
+      - {x: 20, y: -30.5}
+      - {x: 25, y: -31.5}
+      - {x: 31, y: -24.5}
+      - {x: 38, y: -18.5}
+      - {x: 42, y: -13.5}
+      - {x: 44, y: -3.5}
+      - {x: 43, y: 3.5}
+      - {x: 43.520004, y: 6.620022}
+      - {x: 42, y: 17.5}
+      - {x: 43, y: 23.5}
+      - {x: 41, y: 26.5}

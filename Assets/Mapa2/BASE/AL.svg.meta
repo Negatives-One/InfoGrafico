@@ -39,17 +39,46 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: ALSprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.49627268, y: 0.49549997}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 55
+        height: 30
       spriteID: ee45fe99a7524f44b8d60b019210cfc2
       internalID: 0
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 22.5, y: 14}
+      - {x: 17.5, y: 13}
+      - {x: 15.5, y: 14}
+      - {x: 12.5, y: 13}
+      - {x: 6.5, y: 8}
+      - {x: 1.5, y: 6}
+      - {x: -2.5, y: 6}
+      - {x: -4.5, y: 5}
+      - {x: -9.5, y: 8}
+      - {x: -13.5, y: 11}
+      - {x: -15.5, y: 12}
+      - {x: -19.5, y: 12}
+      - {x: -26.5, y: 6}
+      - {x: -26.5, y: 5}
+      - {x: -14.5, y: -1}
+      - {x: -10.5, y: -2}
+      - {x: -8.5, y: -4}
+      - {x: -4.5, y: -6}
+      - {x: -1.5, y: -10}
+      - {x: 5.5, y: -13}
+      - {x: 6.5, y: -11}
+      - {x: 11.5, y: -6}
+      - {x: 13.5, y: -4}
+      - {x: 14.5, y: -1}
+      - {x: 17.5, y: 0}
+      - {x: 21.5, y: 6}
+      - {x: 24.5, y: 9}
+      - {x: 26.5, y: 13}

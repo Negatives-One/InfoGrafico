@@ -8,6 +8,7 @@ using DG.Tweening;
 using Shapes;
 using SimpleJSON;
 using System.IO;
+using TMPro;
 
 [RequireComponent(typeof(PolygonCollider2D))]
 //[ExecuteInEditMode]
@@ -280,6 +281,10 @@ public class Estado : ImmediateModeShapeDrawer
             {
                 continue;
             }
+            else if (t.gameObject.name == "Text")
+            {
+                t.gameObject.GetComponent<MeshRenderer>().sortingOrder = 11;
+            }
             else
             {
                 t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
@@ -299,6 +304,10 @@ public class Estado : ImmediateModeShapeDrawer
             else if (t.gameObject.name == "Rectangle")
             {
                 continue;
+            }
+            else if (t.gameObject.name == "Text")
+            {
+                t.gameObject.GetComponent<MeshRenderer>().sortingOrder = 1;
             }
             else
             {

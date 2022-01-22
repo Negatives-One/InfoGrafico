@@ -39,17 +39,41 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: SESprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.49333334, y: 0.49337834}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
+        width: 33
+        height: 37
       spriteID: dae50db43cc50d34cae84595cd55efe0
       internalID: 0
-    PhysicsOutlines: []
+    PhysicsOutlines:
+    - Vertices:
+      - {x: -11.5, y: 15.5}
+      - {x: -11.5, y: 13.5}
+      - {x: -7.5, y: 8.5}
+      - {x: -8.5, y: 2.5}
+      - {x: -8.5, y: -2.5}
+      - {x: -11.5, y: -4.5}
+      - {x: -15.5, y: -3.5}
+      - {x: -15.5, y: -6.5}
+      - {x: -11.5, y: -12.5}
+      - {x: -11.5, y: -14.5}
+      - {x: -5.5, y: -17.5}
+      - {x: -3.5, y: -17.5}
+      - {x: -0.5, y: -15.5}
+      - {x: 2.5, y: -11.5}
+      - {x: 7.5, y: -3.5}
+      - {x: 13.5, y: 0.5}
+      - {x: 15.5, y: 1.5}
+      - {x: 8.5, y: 5.5}
+      - {x: 6.5, y: 9.5}
+      - {x: 1.5, y: 11.5}
+      - {x: -0.5, y: 13.5}
+      - {x: -4.5, y: 14.5}
+      - {x: -11.5, y: 17.5}
