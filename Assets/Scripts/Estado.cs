@@ -15,10 +15,7 @@ using TMPro;
 public class Estado : ImmediateModeShapeDrawer
 {
     private Manager manager;
-    [SerializeField] private Color normalColor;
-    [SerializeField] private Color highlightedColor;
-    [SerializeField] private Color pressedColor;
-    //[SerializeField] private float fadeDuration;
+
     private SpriteRenderer image;
     private PolygonCollider2D colisor;
     public UnityEvent _onRelease;
@@ -39,13 +36,13 @@ public class Estado : ImmediateModeShapeDrawer
     private Rectangle rect;
 
     private Vector2 rectSize = new Vector2();
-    private Vector2 textBoxSize = new Vector2(5f, 3.5f);
+    private Vector2 textBoxSize = new Vector2(6f, 3.5f);
 
     private Vector3 distanceToDisplay = new Vector3();
     private float offSet = 0f;
     private float offSetMax = 0.3f;
 
-    private float stepTime = 0.15f;
+    public static float stepTime = 0.15f;
 
     private Sequence returnSequence;
     private Sequence goSequence;
@@ -55,36 +52,53 @@ public class Estado : ImmediateModeShapeDrawer
     public bool returnEnded = false;
 
     public bool isInside = false;
+    public bool clicked = false;
 
     private Color cor = new Color(1f, 1f, 1f);
 
+    public Color HighlightColor;
+
     public void OnPointerDown()
     {
-        _onPress.Invoke();
-        //image.color = pressedColor;
-        Debug.Log("Press");
+        if (!manager.geralMapa)
+        {
+            _onPress.Invoke();
+            clicked = !clicked;
+            if (clicked)
+            {
+                manager.MoveBrasil(manager.cornerPos);
+                Go();
+                manager.ActiveExcept(nome);
+                manager.ChangeSelected(this);
+            }
+            else
+            {
+                manager.MoveBrasil(manager.centerPos);
+                Return(stepTime);
+                manager.selectedState = null;
+            }
+            Debug.Log("Press");
+        }
     }
 
     public void OnPointerUp()
     {
         _onRelease.Invoke();
-        //image.color = highlightedColor;
         Debug.Log("Release");
     }
 
     public void OnPointerEnter()
     {
-        if (!manager.geralMapa)
+        if (!manager.geralMapa && !clicked)
         {
             inside = true;
-            image.color = highlightedColor;
-            manager.ChangeSelected(this);
+            //manager.ChangeSelected(this);
             ScaleAll(highlightSize, 0.5f);
             HighPriority();
             manager.DeactiveExcept(nome);
             Debug.Log("Enter");
 
-            Go();
+            //Go();
         }
     }
 
@@ -92,14 +106,14 @@ public class Estado : ImmediateModeShapeDrawer
     {
         if (!manager.geralMapa)
         {
-            inside = false;
-            image.color = normalColor;
-            ScaleAll(normalSize, 0.5f);
-            LowPriority();
-            manager.ActiveExcept(nome);
+            if (!clicked)
+            {
+                inside = false;
+                ScaleAll(normalSize, 0.5f);
+                LowPriority();
+                manager.ActiveExcept(nome);
+            }
             Debug.Log("Exit");
-
-            Return();
         }
     }
     private void Awake()
@@ -149,10 +163,6 @@ public class Estado : ImmediateModeShapeDrawer
         manager = GameObject.Find("MouseManager").GetComponent<Manager>();
         image = GetComponent<SpriteRenderer>();
         colisor = GetComponent<PolygonCollider2D>();
-        normalColor = Color.white;
-        highlightedColor = Color.white;
-        pressedColor = Color.white;
-        image.color = normalColor;
 
         nome = transform.parent.gameObject.name;
         for (int i = 0; i < transform.parent.childCount; i++)
@@ -164,9 +174,10 @@ public class Estado : ImmediateModeShapeDrawer
         linha.SortingOrder = -3;
         linha.Thickness = 0.1f;
         linha.Color = Color.white;
+
         for(int p = 0; p < linha.points.Count; p++)
         {
-            linha.points[p] = new PolylinePoint(linha.points[p].point, Color.white, linha.points[p].thickness - 0.1f) ;
+            linha.points[p] = new PolylinePoint(linha.points[p].point, Color.white, linha.points[p].thickness - 0.3f) ;
         }
         Reiniciar();
         Load();
@@ -179,6 +190,10 @@ public class Estado : ImmediateModeShapeDrawer
         rect.Type = Rectangle.RectangleType.RoundedSolid;
         rect.CornerRadiusMode = Rectangle.RectangleCornerRadiusMode.PerCorner;
         rect.CornerRadii = new Vector4(0f, 0.25f, 0.25f, 0.25f);
+
+        TMP_Text texto = transform.parent.GetChild(4).gameObject.GetComponent<TMP_Text>();
+        texto.text = nome;
+        texto.fontSize = 2;
     }
 
     void Update()
@@ -197,8 +212,10 @@ public class Estado : ImmediateModeShapeDrawer
         rect.Height = rectSize.y;
     }
 
-    void Return()
+    public void Return(float time)
     {
+        ChangeColor(new Color(1f, 1f, 1f, 1f));
+        LowPriority();
         goSequence.Kill();
         returnEnded = false;
         returnSequence = DOTween.Sequence();
@@ -210,10 +227,12 @@ public class Estado : ImmediateModeShapeDrawer
         //manager.returnSequence.OnComplete(() => Reiniciar());
         returnSequence.OnComplete(() => returnEnded = true);
         returnSequence.OnComplete(() => rect.Color = new Color(1f, 1f, 1f, 0f));
+        returnSequence.OnComplete(() => ChangeColor(new Color(1f, 1f, 1f, 1f)));
+        returnSequence.OnComplete(() => ScaleAll(normalSize, stepTime));
         returnSequence.Play();
     }
 
-    void Go()
+    public void Go()
     {
         rect.Color = Color.white;
         goEnded = false;
@@ -320,6 +339,9 @@ public class Estado : ImmediateModeShapeDrawer
     {
         ScaleAll(normalSize, .5f);
         LowPriority();
+        isInside = false;
+        inside = false;
+        clicked = false;
     }
 
     public void ChangeColor(Color novaCor)

@@ -57,6 +57,9 @@ public class Manager : ImmediateModeShapeDrawer
     public Sequence centerSequence;
     public Sequence cornerSequence;
 
+    public float cornerPos = -3.7f;
+    public float centerPos = 0f;
+
     private void Start()
     {
         Transform brasil = GameObject.Find("Brasil").transform;
@@ -68,6 +71,7 @@ public class Manager : ImmediateModeShapeDrawer
         informacao = new Informacao();
         informacao.transparency = 0;
         toReset = estados[0];
+        Map1();
     }
 
     void Update()
@@ -124,6 +128,7 @@ public class Manager : ImmediateModeShapeDrawer
         else
         {
             selectedState.Resetar();
+            selectedState.Return(0.1f);
             selectedState = state;
         }
     }
@@ -170,7 +175,7 @@ public class Manager : ImmediateModeShapeDrawer
         TMP2020.text = text2020;
     }
 
-    public void Center()
+    public void Map2()
     {
         DOTween.To(() => legendaTransparency, x => legendaTransparency = x, 1f, 0.5f);
         for (int k = 0; k < estados.Count; k++)
@@ -188,11 +193,11 @@ public class Manager : ImmediateModeShapeDrawer
         geralMapa = true;
         cornerSequence.Kill();
         centerSequence = DOTween.Sequence();
-        centerSequence.Append(Brasil.DOMoveX(0f, 0.5f));
+        centerSequence.Append(Brasil.DOMoveX(centerPos, 0.5f));
         centerSequence.Play();
     }
 
-    public void Corner()
+    public void Map1()
     {
         DOTween.To(() => legendaTransparency, x => legendaTransparency = x, 0f, 0.5f);
         for (int k = 0; k < estados.Count; k++)
@@ -203,8 +208,30 @@ public class Manager : ImmediateModeShapeDrawer
         geralMapa = false;
         centerSequence.Kill();
         cornerSequence = DOTween.Sequence();
-        centerSequence.Append(Brasil.DOMoveX(-3.7f, 0.5f));
+        centerSequence.Append(Brasil.DOMoveX(centerPos, 0.5f));
         centerSequence.OnComplete(() => geralMapa = false);
         centerSequence.Play();
+    }
+
+    public void MoveBrasil(float pos)
+    {
+        cornerSequence = DOTween.Sequence();
+        centerSequence.Append(Brasil.DOMoveX(pos, 0.5f));
+        centerSequence.OnComplete(() => geralMapa = false);
+        centerSequence.Play();
+    }
+
+    public void Clean()
+    {
+        foreach(Estado e in estados)
+        {
+            e.Resetar();
+            e.Return(0f);
+        }
+    }
+
+    public void SelectClear()
+    {
+        selectedState = null;
     }
 }
