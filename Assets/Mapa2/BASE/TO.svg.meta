@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 56b0480f6de67a94dbc30eabeef7274e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
+  svgType: 0
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 100
+  gradientResolution: 64
+  alignment: 0
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 0
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 0
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 1
+  stepDistance: 10
+  samplingStepDistance: 100
+  maxCordDeviationEnabled: 0
+  maxCordDeviation: 1
+  maxTangentAngleEnabled: 0
+  maxTangentAngle: 5
+  keepTextureAspectRatio: 1
+  textureSize: 256
+  textureWidth: 256
+  textureHeight: 256
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 0
+  useSVGPixelsPerUnit: 0
+  spriteData:
+    TessellationDetail: 0
+    SpriteRect:
+      name: TOSprite
+      originalName: 
+      pivot: {x: 0.4998295, y: 0.49860543}
+      alignment: 0
+      border: {x: 0, y: 0, z: 0, w: 0}
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 88
+        height: 147
+      spriteID: d05d3208ba58ec54cba8a048da956a00
+      internalID: 0
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 12, y: 67.5}
+      - {x: 4, y: 71.5}
+      - {x: 1, y: 71.5}
+      - {x: -2, y: 72.5}
+      - {x: -4, y: 72.5}
+      - {x: -7, y: 70.5}
+      - {x: -5, y: 69.5}
+      - {x: -2, y: 69.5}
+      - {x: 2, y: 65.5}
+      - {x: 2, y: 64.5}
+      - {x: 0, y: 63.5}
+      - {x: 1, y: 60.5}
+      - {x: -1.0937576, y: 58.687515}
+      - {x: 0, y: 56.5}
+      - {x: -3, y: 55.5}
+      - {x: -4, y: 51.5}
+      - {x: -7, y: 48.55287}
+      - {x: -7, y: 46.5}
+      - {x: -13, y: 44.5}
+      - {x: -16, y: 42.5}
+      - {x: -16, y: 36.5}
+      - {x: -19, y: 31.5}
+      - {x: -19, y: 29.5}
+      - {x: -16, y: 27.5}
+      - {x: -16, y: 22.5}
+      - {x: -17, y: 18.5}
+      - {x: -19, y: 14.5}
+      - {x: -22, y: 7.5}
+      - {x: -26, y: 5.5}
+      - {x: -31, y: -1.5}
+      - {x: -37, y: -15.5}
+      - {x: -38, y: -19.5}
+      - {x: -41.256607, y: -25.360722}
+      - {x: -41, y: -31.5}
+      - {x: -43, y: -39.5}
+      - {x: -42, y: -41.5}
+      - {x: -43, y: -43.5}
+      - {x: -42, y: -48.5}
+      - {x: -42, y: -52.5}
+      - {x: -41, y: -56.5}
+      - {x: -42, y: -58.5}
+      - {x: -41, y: -62.5}
+      - {x: -40, y: -63.5}
+      - {x: -39, y: -60.5}
+      - {x: -36, y: -56.5}
+      - {x: -34, y: -60.5}
+      - {x: -35.163586, y: -63.577435}
+      - {x: -35, y: -65.5}
+      - {x: -21, y: -70.5}
+      - {x: -16, y: -61.5}
+      - {x: -14, y: -60.5}
+      - {x: -10, y: -64.5}
+      - {x: -9, y: -68.5}
+      - {x: -7, y: -69.5}
+      - {x: 1, y: -69.5}
+      - {x: 9, y: -72.5}
+      - {x: 9, y: -69.5}
+      - {x: 14, y: -70.5}
+      - {x: 20, y: -68.5}
+      - {x: 26, y: -67.5}
+      - {x: 28, y: -65.5}
+      - {x: 35, y: -62.5}
+      - {x: 36, y: -58.5}
+      - {x: 33, y: -56.5}
+      - {x: 33, y: -51.5}
+      - {x: 38, y: -47.5}
+      - {x: 35, y: -44.5}
+      - {x: 36, y: -41.5}
+      - {x: 32, y: -40.5}
+      - {x: 29, y: -37.5}
+      - {x: 33, y: -30.5}
+      - {x: 35, y: -28.5}
+      - {x: 34, y: -26.5}
+      - {x: 37, y: -23.5}
+      - {x: 43, y: -19.5}
+      - {x: 41, y: -19.5}
+      - {x: 38, y: -17.5}
+      - {x: 33, y: -16.5}
+      - {x: 31, y: -13.5}
+      - {x: 30, y: -10.5}
+      - {x: 27, y: -8.5}
+      - {x: 29, y: -4.5}
+      - {x: 26, y: -2.5}
+      - {x: 24, y: 1.5}
+      - {x: 20, y: 5.5}
+      - {x: 23, y: 8.5}
+      - {x: 23, y: 10.5}
+      - {x: 25, y: 15.5}
+      - {x: 27, y: 16.5}
+      - {x: 30, y: 16.5}
+      - {x: 30, y: 23.5}
+      - {x: 29, y: 24.5}
+      - {x: 25, y: 23.5}
+      - {x: 21, y: 21.5}
+      - {x: 13, y: 32.5}
+      - {x: 12, y: 35.5}
+      - {x: 10, y: 37.5}
+      - {x: 13, y: 41.5}
+      - {x: 14, y: 49.5}
+      - {x: 15, y: 54.5}
+      - {x: 14, y: 56.5}
+      - {x: 14, y: 61.5}
+      - {x: 13, y: 63.5}

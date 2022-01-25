@@ -1,0 +1,64 @@
+fileFormatVersion: 2
+guid: acafdffbdd9129d4c9463d3cae5a02a4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
+  svgType: 0
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 100
+  gradientResolution: 64
+  alignment: 0
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 0
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 0
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 1
+  stepDistance: 10
+  samplingStepDistance: 100
+  maxCordDeviationEnabled: 0
+  maxCordDeviation: 1
+  maxTangentAngleEnabled: 0
+  maxTangentAngle: 5
+  keepTextureAspectRatio: 1
+  textureSize: 256
+  textureWidth: 256
+  textureHeight: 256
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 0
+  useSVGPixelsPerUnit: 0
+  spriteData:
+    TessellationDetail: 1
+    SpriteRect:
+      name: DFSprite
+      originalName: 
+      pivot: {x: 0.5079412, y: 0.51}
+      alignment: 0
+      border: {x: 0, y: 0, z: 0, w: 0}
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 10
+      spriteID: d9cd047d1f2464e4da10879c35981747
+      internalID: 0
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 8.5, y: -5}
+      - {x: 7.5, y: -4}
+      - {x: 8.284, y: 3.055995}
+      - {x: 6.3226395, y: 4.4255695}
+      - {x: -6.6634116, y: 4.9288254}
+      - {x: -8.291036, y: -1.2116487}
+      - {x: -6.7599726, y: -4.4501123}
+      - {x: -6.092207, y: -4.741544}

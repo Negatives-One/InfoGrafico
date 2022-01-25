@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: af6518598cf3c304ba8dc70539ec1c8a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
+  svgType: 0
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 100
+  gradientResolution: 64
+  alignment: 0
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 0
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 0
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 1
+  stepDistance: 10
+  samplingStepDistance: 100
+  maxCordDeviationEnabled: 0
+  maxCordDeviation: 1
+  maxTangentAngleEnabled: 0
+  maxTangentAngle: 5
+  keepTextureAspectRatio: 1
+  textureSize: 256
+  textureWidth: 256
+  textureHeight: 256
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 0
+  useSVGPixelsPerUnit: 0
+  spriteData:
+    TessellationDetail: 0.2
+    SpriteRect:
+      name: ESSprite
+      originalName: 
+      pivot: {x: 0.4975641, y: 0.5024603}
+      alignment: 0
+      border: {x: 0, y: 0, z: 0, w: 0}
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 39
+        height: 63
+      spriteID: b59045b7286776e4f85714a634263810
+      internalID: 0
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 5.5, y: 30.5}
+      - {x: -1.5, y: 29.5}
+      - {x: -2.5, y: 27.5}
+      - {x: -5.5, y: 24.5}
+      - {x: -3.5, y: 21.5}
+      - {x: -3.5, y: 18.5}
+      - {x: -2.5, y: 17.5}
+      - {x: -2.5, y: 15.5}
+      - {x: -4.5, y: 10.5}
+      - {x: -2.5, y: 7.5}
+      - {x: -2.5, y: 2.5}
+      - {x: -6.5, y: -2.5}
+      - {x: -6.5, y: -5.5}
+      - {x: -8.5, y: -6.5}
+      - {x: -9.5, y: -11.5}
+      - {x: -16.5, y: -12.5}
+      - {x: -18.5, y: -21.5}
+      - {x: -16.5, y: -23.5}
+      - {x: -16.5, y: -27.5}
+      - {x: -8.5, y: -30.5}
+      - {x: -4.5, y: -29.5}
+      - {x: -3.5, y: -30.5}
+      - {x: -0.5, y: -23.5}
+      - {x: 3.5, y: -21.5}
+      - {x: 6.5, y: -17.5}
+      - {x: 7.5, y: -12.5}
+      - {x: 9.5, y: -10.5}
+      - {x: 12.5, y: -2.5}
+      - {x: 16.5, y: -0.5}
+      - {x: 18.5, y: 3.5}
+      - {x: 17.5, y: 13.5}
+      - {x: 17.5, y: 19.5}
+      - {x: 18.5, y: 23.5}
+      - {x: 9.5, y: 29.5}
