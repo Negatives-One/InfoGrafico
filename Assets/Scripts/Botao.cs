@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
-[RequireComponent(typeof(BoxCollider2D))]
-[ExecuteInEditMode]
-public class GameButton : MonoBehaviour
+[RequireComponent(typeof(PolygonCollider2D))]
+public class Botao : MonoBehaviour
 {
     [SerializeField] private Color normalColor;
     [SerializeField] private Color highlightedColor;
     [SerializeField] private Color pressedColor;
+    public CaixaRuim cr;
+    public TMP_Text text;
+    public bool is2016;
     //[SerializeField] private float fadeDuration;
     private SpriteRenderer image;
-    private BoxCollider2D colisor;
+    private PolygonCollider2D colisor;
     public UnityEvent _onRelease;
     public UnityEvent _onPress;
     public UnityEvent _onEnter;
@@ -25,6 +28,15 @@ public class GameButton : MonoBehaviour
     {
         _onPress.Invoke();
         image.color = pressedColor;
+        if (is2016)
+        {
+            cr.clicked2016 = true;
+        }
+        else
+        {
+            cr.clicked2016 = false;
+        }
+        cr.Refresh();
         Debug.Log("Press");
     }
 
@@ -59,12 +71,12 @@ public class GameButton : MonoBehaviour
     private void Start()
     {
         image = GetComponent<SpriteRenderer>();
-        colisor = GetComponent<BoxCollider2D>();
+        colisor = GetComponent<PolygonCollider2D>();
         image.color = normalColor;
     }
 
     private void Update()
     {
-        colisor.size = image.size;
+
     }
 }

@@ -761,6 +761,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 22850d6458d8d1146a4680a729dc2f2c, type: 3}
   m_PrefabInstance: {fileID: 725660831}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &85440967 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+  m_PrefabInstance: {fileID: 1319418530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &90221852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1793,6 +1798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -1814,6 +1820,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -2094,6 +2101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -2115,6 +2123,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -2772,6 +2781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -2793,6 +2803,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -3404,6 +3415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -3425,6 +3437,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -3823,6 +3836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -3844,6 +3858,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -5131,6 +5146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -5152,6 +5168,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -5827,6 +5844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -5848,6 +5866,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -5962,6 +5981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -5983,6 +6003,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -6120,9 +6141,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490285061}
-  - component: {fileID: 490285060}
-  - component: {fileID: 490285059}
-  - component: {fileID: 490285058}
   m_Layer: 0
   m_Name: Legenda
   m_TagString: Untagged
@@ -6130,108 +6148,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &490285058
-MeshRenderer:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490285057}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 7a2265fc202676141a8729ed7751f445, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &490285059
-MeshFilter:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490285057}
-  m_Mesh: {fileID: 43100795730674332, guid: a3d1f56cebf202c448b6fb479f61a9dc, type: 2}
---- !u!114 &490285060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490285057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f210828086c1a4398856e1ba65627c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blendMode: 1
-  scaleMode: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
-  detailLevel: 2
-  renderQueue: -1
-  zTest: 4
-  zOffsetFactor: 0
-  zOffsetUnits: 0
-  stencilComp: 8
-  stencilOpPass: 0
-  stencilRefID: 0
-  stencilReadMask: 255
-  stencilWriteMask: 255
-  pivot: 0
-  width: 4
-  height: 2
-  type: 1
-  cornerRadiusMode: 1
-  cornerRadii: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
-  thickness: 0.1
-  thicknessSpace: 0
-  matchDashSpacingToSize: 1
-  dashed: 0
-  dashStyle:
-    type: 0
-    space: -2
-    snap: 1
-    size: 16
-    spacing: 0.5
-    offset: 0
-    shapeModifier: 1
-  fill:
-    type: 0
-    space: 0
-    colorStart: {r: 0, g: 0, b: 0, a: 1}
-    colorEnd: {r: 1, g: 1, b: 1, a: 1}
-    linearStart: {x: 0, y: 0, z: 0}
-    linearEnd: {x: 0, y: 1, z: 0}
-    radialOrigin: {x: 0, y: 0, z: 0}
-    radialRadius: 1
-  useFill: 0
 --- !u!4 &490285061
 Transform:
   m_ObjectHideFlags: 0
@@ -6240,7 +6156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490285057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -1.83, z: 0}
+  m_LocalPosition: {x: 3.37, y: -1.83, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children:
   - {fileID: 501639045}
@@ -6515,7 +6431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.4745098, g: 0.6156863, b: 0.85882354, a: 1}
+  color: {r: 0.9843137, g: 0.92156863, b: 0.37254903, a: 1}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -6528,7 +6444,7 @@ MonoBehaviour:
   stencilWriteMask: 255
   pivot: 1
   width: 0.65
-  height: 0.4
+  height: 0.65
   type: 0
   cornerRadiusMode: 0
   cornerRadii: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
@@ -6988,6 +6904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -7009,6 +6926,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -8242,12 +8160,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1247316193}
+  - {fileID: 1599237773}
   m_Father: {fileID: 825582145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 418}
+  m_AnchoredPosition: {x: -620, y: 240}
   m_SizeDelta: {x: 271.3076, y: 110.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632103234
@@ -8318,6 +8237,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 825582146}
+        m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+        m_MethodName: UpdateAtivado
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &632103235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8371,7 +8302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &636986765
 Transform:
   m_ObjectHideFlags: 0
@@ -8380,7 +8311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636986761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 1.5, z: 0}
+  m_LocalPosition: {x: 2.1, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children:
   - {fileID: 1324535875}
@@ -8417,6 +8348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -8438,6 +8370,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -8932,6 +8865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -8953,6 +8887,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -9530,8 +9465,8 @@ MonoBehaviour:
 
     100'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
+  m_sharedMaterial: {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9619,7 +9554,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10599,6 +10534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -10620,6 +10556,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -10845,6 +10782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -10866,6 +10804,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -11037,6 +10976,7 @@ GameObject:
   - component: {fileID: 825582144}
   - component: {fileID: 825582143}
   - component: {fileID: 825582142}
+  - component: {fileID: 825582146}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -11118,6 +11058,7 @@ RectTransform:
   m_Children:
   - {fileID: 632103233}
   - {fileID: 1267925012}
+  - {fileID: 85440967}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11126,6 +11067,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &825582146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825582141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a16284bfe210e946a125a7154112ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ativadoColor: {r: 1, g: 1, b: 1, a: 1}
+  desativadoColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  map1Ativado: 1
+  map1Text: {fileID: 1247316194}
+  map1Image: {fileID: 1599237774}
+  map2Text: {fileID: 382490605}
+  map2Image: {fileID: 1948585373}
 --- !u!1 &827647744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: fbb0ada5a0727a14590c34c2df80e403, type: 3}
@@ -11149,6 +11109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -11170,6 +11131,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -11691,6 +11653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -11712,6 +11675,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -12657,6 +12621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -12678,6 +12643,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -12915,6 +12881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -12936,6 +12903,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -13455,131 +13423,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 277c483dafcab9d4b97343cbcdafe6e7, type: 3}
   m_PrefabInstance: {fileID: 1633664079}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1061642617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1061642621}
-  - component: {fileID: 1061642620}
-  - component: {fileID: 1061642619}
-  - component: {fileID: 1061642618}
-  m_Layer: 0
-  m_Name: Line
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1061642618
-MeshRenderer:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061642617}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d8dcf53039a8e5f468fb44f7e1a08f76, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1061642619
-MeshFilter:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061642617}
-  m_Mesh: {fileID: 43100795730674332, guid: a3d1f56cebf202c448b6fb479f61a9dc, type: 2}
---- !u!114 &1061642620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061642617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad38a8f0c6def84899724d5320b316a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blendMode: 1
-  scaleMode: 0
-  color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-  detailLevel: 2
-  renderQueue: -1
-  zTest: 4
-  zOffsetFactor: 0
-  zOffsetUnits: 0
-  stencilComp: 8
-  stencilOpPass: 0
-  stencilRefID: 0
-  stencilReadMask: 255
-  stencilWriteMask: 255
-  geometry: 1
-  colorMode: 0
-  colorEnd: {r: 1, g: 1, b: 1, a: 1}
-  start: {x: 0, y: 0, z: 0}
-  end: {x: 1, y: 0, z: 0}
-  thickness: 0.125
-  thicknessSpace: 0
-  endCaps: 2
-  matchDashSpacingToSize: 1
-  dashed: 0
-  dashStyle:
-    type: 0
-    space: -1
-    snap: 2
-    size: 4
-    spacing: 4
-    offset: 0
-    shapeModifier: 1
---- !u!4 &1061642621
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061642617}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.79, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1082390643
 GameObject:
   m_ObjectHideFlags: 0
@@ -13896,6 +13739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -13917,6 +13761,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -13995,6 +13840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -14016,6 +13862,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -14854,6 +14701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -14875,6 +14723,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -15714,12 +15563,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 382490604}
+  - {fileID: 1948585372}
   m_Father: {fileID: 825582145}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 417.99997}
+  m_AnchoredPosition: {x: -620, y: 120}
   m_SizeDelta: {x: 271.3076, y: 110.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267925013
@@ -15790,17 +15640,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1356165321}
-        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 825582146}
+        m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+        m_MethodName: UpdateAtivado
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1267925014
 MonoBehaviour:
@@ -16124,6 +15974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -16145,6 +15996,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -16285,6 +16137,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 7f5514fcc4a1cc04790c1c5dd00e33ad, type: 3}
   m_PrefabInstance: {fileID: 705383924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1319418530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 825582145}
+    m_Modifications:
+    - target: {fileID: 1435847330664235346, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_Name
+      value: Button (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235346, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 615
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235348, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1356165322}
+    - target: {fileID: 1435847330664235348, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitialScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235348, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
 --- !u!1 &1324535874
 GameObject:
   m_ObjectHideFlags: 0
@@ -16344,8 +16309,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nome
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
+  m_sharedMaterial: {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16433,7 +16398,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16484,7 +16449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338728404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0.6, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 888237594}
@@ -16588,8 +16553,8 @@ MonoBehaviour:
 
     100'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
+  m_sharedMaterial: {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16677,7 +16642,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16731,8 +16696,9 @@ MonoBehaviour:
   useCullingMasks: 0
   geralMapa: 0
   Brasil: {fileID: 1338728405}
+  claro: {r: 0.98431, g: 0.92157, b: 0.37255, a: 1}
+  escuro: {r: 0.93333, g: 0.45098, b: 0.00784, a: 1}
   legendaRects:
-  - {fileID: 490285060}
   - {fileID: 501639048}
   - {fileID: 1416421610}
   legendaTxt: {fileID: 1669102309}
@@ -16749,6 +16715,7 @@ MonoBehaviour:
   TMP2020: {fileID: 730482147}
   cornerPos: -3.7
   centerPos: 0
+  caixa: {fileID: 755484401617371233, guid: dd99377933168cf45a62cb9111c5ec2d, type: 3}
 --- !u!4 &1356165323
 Transform:
   m_ObjectHideFlags: 0
@@ -16993,7 +16960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375428584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 2.88, z: 0}
+  m_LocalPosition: {x: 3.85, y: 3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1338728405}
@@ -17405,7 +17372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.06666667, g: 0.22745098, b: 0.5058824, a: 1}
+  color: {r: 0.93333334, g: 0.4509804, b: 0.007843138, a: 1}
   detailLevel: 2
   renderQueue: -1
   zTest: 4
@@ -17418,7 +17385,7 @@ MonoBehaviour:
   stencilWriteMask: 255
   pivot: 1
   width: 0.65
-  height: 0.4
+  height: 0.65
   type: 0
   cornerRadiusMode: 0
   cornerRadii: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
@@ -18086,6 +18053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -18107,6 +18075,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -18943,6 +18912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -18964,6 +18934,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -19030,7 +19001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1565023672
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19094,7 +19065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1566486396
 PrefabInstance:
@@ -19292,6 +19263,81 @@ MonoBehaviour:
     radialOrigin: {x: 0, y: 0, z: 0}
     radialRadius: 1
   useFill: 0
+--- !u!1 &1599237772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1599237773}
+  - component: {fileID: 1599237775}
+  - component: {fileID: 1599237774}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1599237773
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599237772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 632103233}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -68, y: 0}
+  m_SizeDelta: {x: 6, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1599237774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599237772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1599237775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599237772}
+  m_CullTransparentMesh: 1
 --- !u!1 &1604360165
 GameObject:
   m_ObjectHideFlags: 0
@@ -20192,19 +20238,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Diminuiu
-
-    Aumentou'
+  m_text: "Taxa de viol\xEAncia diminuiu\nTaxa de viol\xEAncia aumentou"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
+  m_sharedMaterial: {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20221,19 +20265,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 2.9
+  m_fontSizeBase: 2.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 58.74
+  m_lineSpacing: 169.15
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -20257,7 +20301,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.075264, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20285,7 +20329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20728,6 +20772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -20749,6 +20794,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -21572,6 +21618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -21593,6 +21640,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -22198,6 +22246,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 234ebad955d562044ba2334189b47e3c, type: 3}
+--- !u!1 &1948585371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948585372}
+  - component: {fileID: 1948585374}
+  - component: {fileID: 1948585373}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1948585372
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948585371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1267925012}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -68, y: 0}
+  m_SizeDelta: {x: 6, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1948585373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948585371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1948585374
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948585371}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1951426755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22718,6 +22841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -22739,6 +22863,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -22895,36 +23020,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 07fac3f184f961c479d315799b0e4c8f, type: 3}
---- !u!1 &2017791776
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2017791777}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2017791777
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017791776}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.327402, y: 7.176321, z: -12.3918295}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2024347692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: cb4f4c6c5191c3d44b5fce69ee06bade, type: 3}
@@ -22953,6 +23048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCullingMasks: 0
+  offSetPingo: {x: 0, y: 0, z: 0}
   _onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -22974,6 +23070,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
+  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0

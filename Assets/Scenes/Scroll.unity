@@ -709,11 +709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 265
+      value: 298
       objectReference: {fileID: 0}
     - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84
+      value: 182
       objectReference: {fileID: 0}
     - target: {fileID: 1435847330664235347, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -767,5 +767,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 610412150}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5781002199562029878, guid: b5336a45e856aa54c95ad6c7c28ec0d3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}

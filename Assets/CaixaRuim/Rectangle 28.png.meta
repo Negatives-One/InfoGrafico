@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 50536fef84d88cf459c4cf0dee0d1912
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 517371522738387632
+    second: Rectangle 28_0
+  - first:
+      213: 7113575591919506472
+    second: Rectangle 28_1
+  - first:
+      213: -2439974238462041658
+    second: Rectangle 28_2
+  - first:
+      213: 6478807490685166840
+    second: Rectangle 28_3
+  - first:
+      213: 6448019338046951136
+    second: Rectangle 28_4
+  - first:
+      213: 8744782662860796376
+    second: Rectangle 28_5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 145, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rectangle 28_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 32}
+        - {x: -36, y: 31}
+        - {x: -43, y: 28}
+        - {x: -49, y: 24}
+        - {x: -57, y: 15}
+        - {x: -57, y: 14}
+        - {x: -62, y: 9}
+        - {x: -65, y: 2}
+        - {x: -66, y: -3}
+        - {x: -66, y: -32}
+        - {x: 66, y: -32}
+        - {x: 66, y: 32}
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -34, y: 31}
+        - {x: -43, y: 27}
+        - {x: -49, y: 23}
+        - {x: -57, y: 14}
+        - {x: -57, y: 13}
+        - {x: -61, y: 9}
+        - {x: -65, y: 0}
+        - {x: -66, y: -6}
+        - {x: -66, y: -32}
+        - {x: 62, y: -32}
+        - {x: 62, y: 32}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0ba79b5a8a21e2700800000000000000
+      internalID: 517371522738387632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 28_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 161
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65, y: 2}
+        - {x: 62, y: 9}
+        - {x: 58, y: 15}
+        - {x: 49, y: 23}
+        - {x: 48, y: 23}
+        - {x: 43, y: 28}
+        - {x: 36, y: 31}
+        - {x: 31, y: 32}
+        - {x: -66, y: 32}
+        - {x: -66, y: -32}
+        - {x: 66, y: -32}
+        - {x: 66, y: -3}
+      physicsShape:
+      - - {x: 66, y: -3}
+        - {x: 65, y: 0}
+        - {x: 61, y: 9}
+        - {x: 59, y: 11}
+        - {x: 57, y: 15}
+        - {x: 48, y: 23}
+        - {x: 47, y: 23}
+        - {x: 43, y: 27}
+        - {x: 34, y: 31}
+        - {x: 28, y: 32}
+        - {x: -61, y: 32}
+        - {x: -61, y: -32}
+        - {x: 66, y: -32}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 824504fbf4f78b260800000000000000
+      internalID: 7113575591919506472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 28_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1ad5f8b58732ed0800000000000000
+      internalID: -2439974238462041658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 28_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 97
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4ed6a261959e950800000000000000
+      internalID: 6478807490685166840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 28_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee4325cc67fb7950800000000000000
+      internalID: 6448019338046951136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 28_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 33
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1ffc10085bb5970800000000000000
+      internalID: 8744782662860796376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

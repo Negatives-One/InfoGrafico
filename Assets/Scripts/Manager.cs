@@ -4,14 +4,15 @@ using UnityEngine;
 using Shapes;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Manager : ImmediateModeShapeDrawer
 {
     public bool geralMapa = false;
     public Transform Brasil;
 
-    private Color claro = new Color(0.47451f, 0.61569f, 0.85882f);
-    private Color escuro = new Color(0.06667f, 0.22745f, 0.50588f);
+    public Color claro = new Color(0.98431f, 0.92157f, 0.37255f);
+    public Color escuro = new Color(0.93333f, 0.45098f, 0.00784f);
 
     //claro rgba(0.47451, 0.61569, 0.85882)
     //escuro rgba(0.06667, 0.22745, 0.50588)
@@ -60,9 +61,11 @@ public class Manager : ImmediateModeShapeDrawer
     public float cornerPos = -3.7f;
     public float centerPos = 0f;
 
+    public GameObject caixa;
     private void Start()
     {
         Transform brasil = GameObject.Find("Brasil").transform;
+        centerPos = brasil.position.x;
         for (int i = 0; i < brasil.childCount - 2; i++)
         {
             estados.Add(brasil.GetChild(i).GetChild(0).gameObject.GetComponent<Estado>());
@@ -83,27 +86,39 @@ public class Manager : ImmediateModeShapeDrawer
         }
 
         //ENTER BUTTON
-        if (hit && !hit.collider.gameObject.GetComponent<Estado>().inside)
+        if (hit )
         {
-            hit.collider.gameObject.GetComponent<Estado>().OnPointerEnter();
+            if (hit.collider.gameObject.GetComponent<Estado>())
+                hit.collider.gameObject.GetComponent<Estado>().OnPointerEnter();
+            else
+                hit.collider.gameObject.GetComponent<Botao>().OnPointerEnter();
         }
 
         //EXIT BUTTON
         if (hit != pHit)
         {
-            pHit.collider.gameObject.GetComponent<Estado>().OnPointerExit();
+            if (pHit.collider.gameObject.GetComponent<Estado>())
+                pHit.collider.gameObject.GetComponent<Estado>().OnPointerExit();
+            else
+                pHit.collider.gameObject.GetComponent<Botao>().OnPointerExit();
         }
 
         //CLICK BUTTON
         if (hit && Input.GetMouseButtonDown(0))
         {
-            hit.collider.gameObject.GetComponent<Estado>().OnPointerDown();
+            if (hit.collider.gameObject.GetComponent<Estado>())
+                hit.collider.gameObject.GetComponent<Estado>().OnPointerDown();
+            else
+                hit.collider.gameObject.GetComponent<Botao>().OnPointerDown();
         }
 
         //RELEASE BUTTON
         if (hit && Input.GetMouseButtonUp(0))
         {
-            hit.collider.gameObject.GetComponent<Estado>().OnPointerUp();
+            if (hit.collider.gameObject.GetComponent<Estado>())
+                hit.collider.gameObject.GetComponent<Estado>().OnPointerUp();
+            else
+                hit.collider.gameObject.GetComponent<Botao>().OnPointerUp();
         }
 
         pHit = hit;
@@ -112,11 +127,11 @@ public class Manager : ImmediateModeShapeDrawer
         TMP2016.color = new Color(0, 0, 0, informacao.transparency);
         TMP2020.color = new Color(0, 0, 0, informacao.transparency);
 
-        for(int i = 0; i < legendaRects.Count; i++)
+        for (int i = 0; i < legendaRects.Count; i++)
         {
             legendaRects[i].Color = new Color(legendaRects[i].Color.r, legendaRects[i].Color.g, legendaRects[i].Color.b, legendaTransparency);
         }
-        legendaTxt.color = new Color(0f, 0f, 0f, legendaTransparency);
+        legendaTxt.color = new Color(1f, 1f, 1f, legendaTransparency);
     }
 
     public void ChangeSelected(Estado state)
@@ -159,16 +174,20 @@ public class Manager : ImmediateModeShapeDrawer
         DOTween.To(() => rectSize, x => rectSize = x, size, 0.3f);
     }
 
-    public void DefinirEstado(string _estadoNome, string _homicidio2016, string _feminicidio2016, string _homicidio2020, string _feminicidio2020)
+    public void DefinirEstado(string _estadoNome, string _homicidio2016, string _feminicidio2016, string _homicidio2020, string _feminicidio2020, CaixaRuim cr)
     {
         informacao.estadoNome = _estadoNome;
         informacao.homicidio2016 = _homicidio2016;
         informacao.feminicidio2016 = _feminicidio2016;
         informacao.homicidio2020 = _homicidio2020;
         informacao.feminicidio2020 = _feminicidio2020;
-        
-        string text2016 = "2016\n\nHomicídio Feminino\n"+ informacao.homicidio2016 +"\n\nFeminicídios\n" + informacao.feminicidio2016;
-        string text2020 = "2020\n\nHomicídio Feminino\n" + informacao.homicidio2020 + "\n\nFeminicídios\n" + informacao.feminicidio2020;
+
+        string text2016 = informacao.homicidio2016 + " Homicídios\n" + informacao.feminicidio2016 + " Feminicídios";
+        string text2020 = informacao.homicidio2020 + " Homicídios\n" + informacao.feminicidio2020 + " Feminicídios";
+
+        cr.text2016 = text2016;
+        cr.text2020 = text2020;
+        cr.textNome = informacao.estadoNome;
 
         Header.text = informacao.estadoNome;
         TMP2016.text = text2016;
@@ -177,20 +196,24 @@ public class Manager : ImmediateModeShapeDrawer
 
     public void Map2()
     {
+        geralMapa = true;
         DOTween.To(() => legendaTransparency, x => legendaTransparency = x, 1f, 0.5f);
+
         for (int k = 0; k < estados.Count; k++)
         {
             Estado estado = estados[k];
-            if(estado.estadoHomicidiosFem2016 < estado.estadoHomicidiosFem2020)
+
+            if (estado.estadoHomicidiosFem2016 > estado.estadoHomicidiosFem2020)
             {
                 estado.ChangeColor(claro);
+                DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, claro, 0.5f);
             }
             else
             {
                 estado.ChangeColor(escuro);
+                DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, escuro, 0.5f);
             }
         }
-        geralMapa = true;
         cornerSequence.Kill();
         centerSequence = DOTween.Sequence();
         centerSequence.Append(Brasil.DOMoveX(centerPos, 0.5f));
@@ -199,13 +222,14 @@ public class Manager : ImmediateModeShapeDrawer
 
     public void Map1()
     {
+        geralMapa = false;
         DOTween.To(() => legendaTransparency, x => legendaTransparency = x, 0f, 0.5f);
         for (int k = 0; k < estados.Count; k++)
         {
             Estado estado = estados[k];
+            DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, Color.white, 0.5f);
             estado.ChangeColor(Color.white);
         }
-        geralMapa = false;
         centerSequence.Kill();
         cornerSequence = DOTween.Sequence();
         centerSequence.Append(Brasil.DOMoveX(centerPos, 0.5f));
@@ -223,7 +247,7 @@ public class Manager : ImmediateModeShapeDrawer
 
     public void Clean()
     {
-        foreach(Estado e in estados)
+        foreach (Estado e in estados)
         {
             e.Resetar();
             e.Return(0f);
@@ -233,5 +257,10 @@ public class Manager : ImmediateModeShapeDrawer
     public void SelectClear()
     {
         selectedState = null;
+    }
+
+    public void InitialScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

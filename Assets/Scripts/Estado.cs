@@ -14,6 +14,7 @@ using TMPro;
 //[ExecuteInEditMode]
 public class Estado : ImmediateModeShapeDrawer
 {
+    public Vector3 offSetPingo = new Vector3();
     private Manager manager;
 
     private SpriteRenderer image;
@@ -28,19 +29,22 @@ public class Estado : ImmediateModeShapeDrawer
     [SerializeField] private Vector3 highlightSize = Vector3.one * 1.5f;
 
     [SerializeField] public string nome;
-    [SerializeField] private List<Transform> sprites = new List<Transform>();
+    [SerializeField] public List<Transform> sprites = new List<Transform>();
 
     public bool inside;
 
     private Polyline linha;
     private Rectangle rect;
+    private Disc disc;
+    private TMP_Text texto;
+    private CaixaRuim cr;
 
     private Vector2 rectSize = new Vector2();
     private Vector2 textBoxSize = new Vector2(6f, 3.5f);
 
     private Vector3 distanceToDisplay = new Vector3();
     private float offSet = 0f;
-    private float offSetMax = 0.3f;
+    private float offSetMax = 0.6f;
 
     public static float stepTime = 0.15f;
 
@@ -54,7 +58,7 @@ public class Estado : ImmediateModeShapeDrawer
     public bool isInside = false;
     public bool clicked = false;
 
-    private Color cor = new Color(1f, 1f, 1f);
+    public Color cor = Color.yellow;
 
     public Color HighlightColor;
 
@@ -66,14 +70,14 @@ public class Estado : ImmediateModeShapeDrawer
             clicked = !clicked;
             if (clicked)
             {
-                manager.MoveBrasil(manager.cornerPos);
+                //manager.MoveBrasil(manager.cornerPos);
                 Go();
                 manager.ActiveExcept(nome);
                 manager.ChangeSelected(this);
             }
             else
             {
-                manager.MoveBrasil(manager.centerPos);
+                //manager.MoveBrasil(manager.centerPos);
                 Return(stepTime);
                 manager.selectedState = null;
             }
@@ -172,28 +176,50 @@ public class Estado : ImmediateModeShapeDrawer
 
         linha = transform.parent.gameObject.GetComponent<Polyline>();
         linha.SortingOrder = -3;
-        linha.Thickness = 0.1f;
-        linha.Color = Color.white;
+        linha.Thickness = 0.06f;
+        linha.Color = Color.yellow;
 
-        for(int p = 0; p < linha.points.Count; p++)
+        for (int p = 0; p < linha.points.Count; p++)
         {
-            linha.points[p] = new PolylinePoint(linha.points[p].point, Color.white, linha.points[p].thickness - 0.3f) ;
+            linha.points[p] = new PolylinePoint(linha.points[p].point, Color.yellow, linha.points[p].thickness);
         }
         Reiniciar();
         Load();
 
         rect = gameObject.transform.parent.GetChild(3).gameObject.GetComponent<Rectangle>();
         rect.gameObject.transform.position += (manager.displayPos.position - transform.parent.position) + Vector3.right * offSetMax;
-        rect.gameObject.transform.position += Vector3.up * 0.06f;
+        rect.gameObject.transform.position += Vector3.up * 0.36f;
+        rect.gameObject.transform.position += Vector3.left * 0.3f;
         rect.SortingOrder = 20;
         rect.Color = new Color(1f, 1f, 1f, 0f);
         rect.Type = Rectangle.RectangleType.RoundedSolid;
         rect.CornerRadiusMode = Rectangle.RectangleCornerRadiusMode.PerCorner;
-        rect.CornerRadii = new Vector4(0f, 0.25f, 0.25f, 0.25f);
+        rect.CornerRadii = new Vector4(0.5f, 0.5f, 0.5f, 0.5f);
 
-        TMP_Text texto = transform.parent.GetChild(4).gameObject.GetComponent<TMP_Text>();
+        rect.SortingOrder = -12;
+
+        GameObject a = Instantiate(manager.caixa, rect.gameObject.transform.position, Quaternion.identity, transform.parent);
+
+        cr = a.GetComponent<CaixaRuim>();
+        //cr.gameObject.transform.position += (manager.displayPos.position - transform.parent.position) + Vector3.right * offSetMax;
+        cr.transform.localScale = Vector3.zero;
+
+
+        texto = transform.parent.GetChild(4).gameObject.GetComponent<TMP_Text>();
         texto.text = nome;
         texto.fontSize = 2;
+
+
+
+        GameObject bolinha = new GameObject("Bolinha");
+        bolinha.transform.parent = rect.transform.parent;
+        bolinha.transform.position = rect.transform.position + (Vector3.right * 0.3f) + (Vector3.down * 0.35f);
+        disc = bolinha.AddComponent(typeof(Disc)) as Disc;
+        disc.Radius = 0.06f;
+        disc.SortingOrder = 20;
+        disc.Color = new Color(1f, 0.92f, 0.016f, 0f);
+
+        cor = Color.white;
     }
 
     void Update()
@@ -205,11 +231,13 @@ public class Estado : ImmediateModeShapeDrawer
         linha.SetPointPosition(2, new Vector3(distanceToDisplay.x, distanceToDisplay.y));
         linha.SetPointPosition(3, new Vector3(distanceToDisplay.x + offSet, distanceToDisplay.y));
 
-        sprites[0].gameObject.GetComponent<SpriteRenderer>().color = cor;
         sprites[2].gameObject.GetComponent<SpriteRenderer>().color = cor;
 
         rect.Width = rectSize.x;
         rect.Height = rectSize.y;
+
+        //disc.transform.position = linha.points[linha.points.Count - 1].point;
+        //disc.SortingOrder = linha.SortingOrder;
     }
 
     public void Return(float time)
@@ -220,7 +248,10 @@ public class Estado : ImmediateModeShapeDrawer
         returnEnded = false;
         returnSequence = DOTween.Sequence();
         returnSequence.Append(DOTween.To(() => manager.informacao.transparency, x => manager.informacao.transparency = x, 0f, stepTime));
-        returnSequence.Append(DOTween.To(() => rectSize, x => rectSize = x, Vector2.zero, stepTime));
+        goSequence.Append(DOTween.To(() => disc.Color, x => disc.Color = x, new Color(1f, 0.92f, 0.016f, 0f), 0.01f));
+        //returnSequence.Append(DOTween.To(() => rectSize, x => rectSize = x, Vector2.zero, stepTime));
+        returnSequence.Append(cr.transform.DOScale(Vector3.zero, stepTime));
+
         returnSequence.Append(DOTween.To(() => offSet, x => offSet = x, 0.05f, stepTime));
         returnSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(distanceToDisplay.x, 0.05f, 0f), stepTime));
         returnSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(0.05f, 0.05f, 0f), stepTime));
@@ -236,7 +267,7 @@ public class Estado : ImmediateModeShapeDrawer
     {
         rect.Color = Color.white;
         goEnded = false;
-        manager.DefinirEstado(estadoNome2016, estadoHomicidiosFem2016.ToString(), estadoFeminicidios2016.ToString(), estadoHomicidiosFem2020.ToString(), estadoFeminicidios2020.ToString());
+        manager.DefinirEstado(estadoNome2016, estadoHomicidiosFem2016.ToString(), estadoFeminicidios2016.ToString(), estadoHomicidiosFem2020.ToString(), estadoFeminicidios2020.ToString(), cr);
         returnSequence.Kill(false);
         linha.Color = Color.white;
         Vector3 targetDistance = manager.displayPos.localPosition - transform.parent.localPosition;
@@ -245,7 +276,11 @@ public class Estado : ImmediateModeShapeDrawer
         goSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, 0.05f, 0f), stepTime));
         goSequence.Append(DOTween.To(() => distanceToDisplay, x => distanceToDisplay = x, new Vector3(targetDistance.x, targetDistance.y, 0f), stepTime));
         goSequence.Append(DOTween.To(() => offSet, x => offSet = x, offSetMax, stepTime));
-        goSequence.Append(DOTween.To(() => rectSize, x => rectSize = x, textBoxSize, stepTime));
+        //goSequence.Append(DOTween.To(() => rectSize, x => rectSize = x, textBoxSize, stepTime));
+        goSequence.Append(DOTween.To(() => cr.transform.localScale, x => cr.transform.localScale = x, Vector3.one, stepTime));
+        //returnSequence.Append(cr.transform.DOScale(Vector3.one, stepTime));
+
+        goSequence.Append(DOTween.To(() => disc.Color, x => disc.Color = x, Color.yellow, 0.01f));
         goSequence.Append(DOTween.To(() => manager.informacao.transparency, x => manager.informacao.transparency = x, 1f, stepTime));
         returnSequence.OnComplete(() => goEnded = true);
         goSequence.Play();
@@ -267,7 +302,7 @@ public class Estado : ImmediateModeShapeDrawer
     //{
     //    using (Draw.Command(cam))
     //    {
-    //        Draw.Line(transform.position, transform.position + Vector3.right * 5f, 0.1f, Color.white, Color.white); // Drawing happens here
+    //        Draw.Disc(linha.points[linha.points.Count - 1].point- offSetPingo, 0.06f, DiscColors.Flat(Color.black));
     //    }
     //}
 
@@ -288,8 +323,9 @@ public class Estado : ImmediateModeShapeDrawer
 
     private void HighPriority()
     {
-        DOTween.To(() => cor, x => cor = x, new Color(0.9333333f, 0.4509804f, 0.007843138f), stepTime);
-        linha.SortingOrder = 9;
+        DOTween.To(() => cor, x => cor = x, Color.yellow, stepTime);
+        DOTween.To(() => texto.color, x => texto.color = x, new Color(0.90980f, 0.78824f, 0.14902f, 1f), stepTime);
+        linha.SortingOrder = 10;
         foreach (Transform t in sprites)
         {
             if (t.gameObject.name == "3D")
@@ -306,14 +342,16 @@ public class Estado : ImmediateModeShapeDrawer
             }
             else
             {
-                t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
+                if (t.gameObject.GetComponent<SpriteRenderer>())
+                    t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
             }
         }
     }
     private void LowPriority()
     {
         DOTween.To(() => cor, x => cor = x, new Color(1f, 1f, 1f), stepTime);
-        linha.SortingOrder = -1;
+        DOTween.To(() => texto.color, x => texto.color = x, new Color(0f, 0f, 0f, 1f), stepTime);
+        linha.SortingOrder = -0;
         foreach (Transform t in sprites)
         {
             if (t.gameObject.name == "3D")
@@ -330,7 +368,8 @@ public class Estado : ImmediateModeShapeDrawer
             }
             else
             {
-                t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                if (t.gameObject.GetComponent<SpriteRenderer>())
+                    t.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             }
         }
     }
