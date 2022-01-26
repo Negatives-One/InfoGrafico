@@ -194,6 +194,35 @@ public class Manager : ImmediateModeShapeDrawer
         TMP2020.text = text2020;
     }
 
+    public void Map3()
+    {
+        geralMapa = true;
+        DOTween.To(() => legendaTransparency, x => legendaTransparency = x, 1f, 0.5f);
+
+        for (int k = 0; k < estados.Count; k++)
+        {
+            Estado estado = estados[k];
+
+            if (estado.estadoFeminicidios2016 > estado.estadoFeminicidios2020)
+            {
+                estado.ChangeCor3D(Color.white);
+                estado.ChangeCorBase(claro);
+                estado.ChangeCorLine(Color.white);
+            }
+            else
+            {
+                estado.ChangeCor3D(Color.white);
+                estado.ChangeCorBase(escuro);
+                estado.ChangeCorLine(Color.white);
+            }
+        }
+
+
+        cornerSequence.Kill();
+        centerSequence = DOTween.Sequence();
+        centerSequence.Append(Brasil.DOMoveX(centerPos, 0.5f));
+        centerSequence.Play();
+    }
     public void Map2()
     {
         geralMapa = true;
@@ -205,15 +234,19 @@ public class Manager : ImmediateModeShapeDrawer
 
             if (estado.estadoHomicidiosFem2016 > estado.estadoHomicidiosFem2020)
             {
-                estado.ChangeColor(claro);
-                DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, claro, 0.5f);
+                estado.ChangeCor3D(Color.white);
+                estado.ChangeCorBase(claro);
+                estado.ChangeCorLine(Color.white);
             }
             else
             {
-                estado.ChangeColor(escuro);
-                DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, escuro, 0.5f);
+                estado.ChangeCor3D(Color.white);
+                estado.ChangeCorBase(escuro);
+                estado.ChangeCorLine(Color.white);
             }
         }
+
+
         cornerSequence.Kill();
         centerSequence = DOTween.Sequence();
         centerSequence.Append(Brasil.DOMoveX(centerPos, 0.5f));
@@ -227,8 +260,10 @@ public class Manager : ImmediateModeShapeDrawer
         for (int k = 0; k < estados.Count; k++)
         {
             Estado estado = estados[k];
-            DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, Color.white, 0.5f);
-            estado.ChangeColor(Color.white);
+            //DOTween.To(() => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => estado.sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, Color.white, 0.5f);
+            estado.ChangeCor3D(Color.white);
+            estado.ChangeCorBase(Color.white);
+            estado.ChangeCorLine(new Color(0.8196079f, 0.8196079f, 0.8196079f, 1f));
         }
         centerSequence.Kill();
         cornerSequence = DOTween.Sequence();
