@@ -202,7 +202,7 @@ public class Manager : ImmediateModeShapeDrawer
         for (int k = 0; k < estados.Count; k++)
         {
             Estado estado = estados[k];
-
+            estado.ChangeCorTXT(Color.white);
             if (estado.estadoFeminicidios2016 > estado.estadoFeminicidios2020)
             {
                 estado.ChangeCor3D(Color.white);
@@ -231,7 +231,7 @@ public class Manager : ImmediateModeShapeDrawer
         for (int k = 0; k < estados.Count; k++)
         {
             Estado estado = estados[k];
-
+            estado.ChangeCorTXT(Color.white);
             if (estado.estadoHomicidiosFem2016 > estado.estadoHomicidiosFem2020)
             {
                 estado.ChangeCor3D(Color.white);
@@ -264,6 +264,7 @@ public class Manager : ImmediateModeShapeDrawer
             estado.ChangeCor3D(Color.white);
             estado.ChangeCorBase(Color.white);
             estado.ChangeCorLine(new Color(0.8196079f, 0.8196079f, 0.8196079f, 1f));
+            estado.ChangeCorTXT(Color.black);
         }
         centerSequence.Kill();
         cornerSequence = DOTween.Sequence();
