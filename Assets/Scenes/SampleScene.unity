@@ -6156,7 +6156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490285057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.37, y: -1.83, z: 0}
+  m_LocalPosition: {x: 3.69, y: -2.63, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children:
   - {fileID: 501639045}
@@ -6443,8 +6443,8 @@ MonoBehaviour:
   stencilReadMask: 255
   stencilWriteMask: 255
   pivot: 1
-  width: 0.65
-  height: 0.65
+  width: 0.5
+  height: 0.5
   type: 0
   cornerRadiusMode: 0
   cornerRadii: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
@@ -8166,7 +8166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -620, y: 240}
+  m_AnchoredPosition: {x: -620, y: 385}
   m_SizeDelta: {x: 271.3076, y: 110.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632103234
@@ -15569,7 +15569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -620, y: 120}
+  m_AnchoredPosition: {x: -620, y: 265}
   m_SizeDelta: {x: 271.3076, y: 110.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267925013
@@ -17388,8 +17388,8 @@ MonoBehaviour:
   stencilReadMask: 255
   stencilWriteMask: 255
   pivot: 1
-  width: 0.65
-  height: 0.65
+  width: 0.5
+  height: 0.5
   type: 0
   cornerRadiusMode: 0
   cornerRadii: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
@@ -19046,7 +19046,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3e72edc6980882e4db32ac8e3572a44b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96abc0ec3d2638c48a284bd11ba0823d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.4627451}
   m_FlipX: 0
   m_FlipY: 0
@@ -20242,7 +20242,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Taxa de viol\xEAncia diminuiu\nTaxa de viol\xEAncia aumentou"
+  m_text: 'Diminuiu
+
+    Aumentou'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
   m_sharedMaterial: {fileID: 3453290512035357373, guid: 5754e87ff08b72b4a92c9e5196255a3c, type: 2}
