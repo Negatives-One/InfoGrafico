@@ -4613,7 +4613,7 @@ GameObject:
   - component: {fileID: 387541724}
   - component: {fileID: 387541723}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Swap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4655,11 +4655,35 @@ MonoBehaviour:
   - eventID: 0
     callback:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 825582146}
+          m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+          m_MethodName: ChangeSpriteEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 825582146}
+          m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+          m_MethodName: ChangeSpriteExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &387541724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4703,7 +4727,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 387541725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825582146}
+        m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+        m_MethodName: SwapClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &387541725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5707,6 +5743,67 @@ MonoBehaviour:
     radialOrigin: {x: 0, y: 0, z: 0}
     radialRadius: 1
   useFill: 0
+--- !u!1 &436484907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1435847330664235346, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+  m_PrefabInstance: {fileID: 1319418530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &436484908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436484907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 825582146}
+          m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+          m_MethodName: ChangeSpriteSobreEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 825582146}
+          m_TargetAssemblyTypeName: MapButton, Assembly-CSharp
+          m_MethodName: ChangeSpriteSobreExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &436484909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+  m_PrefabInstance: {fileID: 1319418530}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436484907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &438700983
 GameObject:
   m_ObjectHideFlags: 0
@@ -11233,8 +11330,12 @@ MonoBehaviour:
   showingHomicide: 1
   alternarClaro: {fileID: -4952710772363017731, guid: b560d51c2fad859438c2ef716e8ad989, type: 3}
   alternarEscuro: {fileID: -5484052620911292334, guid: 62479a36cd3126842b834d0d3311d2ea, type: 3}
-  buttonImage: {fileID: 0}
-  buttonText: {fileID: 0}
+  buttonImage: {fileID: 387541725}
+  buttonText: {fileID: 1167342825}
+  sobreClaro: {fileID: -7884407656015195530, guid: 4551c57dac8ef9a47b6786621d4cd92a, type: 3}
+  sobreEscuro: {fileID: 5497604534039962952, guid: c4565c5a4ae95694b91d67fbab71ab17, type: 3}
+  imageSobre: {fileID: 436484909}
+  manager: {fileID: 1356165322}
 --- !u!1 &827647744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: fbb0ada5a0727a14590c34c2df80e403, type: 3}
@@ -11824,7 +11925,7 @@ MonoBehaviour:
   returnEnded: 0
   isInside: 0
   clicked: 0
-  cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  cor: {r: 1, g: 0.00000013510386, b: 0, a: 1}
   HighlightColor: {r: 0, g: 0, b: 0, a: 0}
   estadoNome2020: 
   estadoHomicidiosFem2020: 0
@@ -16429,7 +16530,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1435847330664235346, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: Sobre
       objectReference: {fileID: 0}
     - target: {fileID: 1435847330664235346, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_IsActive

@@ -17,7 +17,7 @@ public class Manager : ImmediateModeShapeDrawer
     //claro rgba(0.47451, 0.61569, 0.85882)
     //escuro rgba(0.06667, 0.22745, 0.50588)
 
-    private float legendaTransparency = 0f;
+    public float legendaTransparency = 0f;
 
     public List<Rectangle> legendaRects;
     public TMP_Text legendaTxt;

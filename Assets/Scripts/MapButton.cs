@@ -23,7 +23,13 @@ public class MapButton : MonoBehaviour
     public Sprite alternarClaro;
     public Sprite alternarEscuro;
     public Image buttonImage;
-    public Image buttonText;
+    public TMP_Text buttonText;
+
+    public Sprite sobreClaro;
+    public Sprite sobreEscuro;
+    public Image imageSobre;
+
+    public Manager manager;
 
     void Update()
     {
@@ -42,10 +48,11 @@ public class MapButton : MonoBehaviour
             map2Image.color = ativadoColor;
         }
 
-        if (showingHomicide)
-        {
+        buttonImage.gameObject.SetActive(!map1Ativado);
 
-        }
+
+        buttonText.color = new Color(buttonText.color.r, buttonText.color.g, buttonText.color.b, manager.legendaTransparency);
+        buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, manager.legendaTransparency);
     }
 
     public void UpdateAtivado(bool value)
@@ -60,5 +67,29 @@ public class MapButton : MonoBehaviour
     public void ChangeSpriteExit()
     {
         buttonImage.sprite = alternarClaro;
+    }
+
+    public void SwapClick()
+    {
+        showingHomicide = !showingHomicide;
+        if (showingHomicide)
+        {
+            buttonText.text = "HOMICÍDIO";
+            manager.Map2();
+        }
+        else
+        {
+            buttonText.text = "FEMINICÍDIO";
+            manager.Map3();
+        }
+    }
+
+    public void ChangeSpriteSobreEnter()
+    {
+        imageSobre.sprite = sobreEscuro;
+    }
+    public void ChangeSpriteSobreExit()
+    {
+        imageSobre.sprite = sobreClaro;
     }
 }
