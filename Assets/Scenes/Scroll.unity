@@ -322,6 +322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab25882588421f14c9847d6de32596a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNormal: {fileID: 21300000, guid: 179bc46a43e495145b3bfa5faa360be6, type: 3}
+  buttonHigh: {fileID: 21300000, guid: 32e541a121b44c841ad4cd16ac2f8e2b, type: 3}
+  button: {fileID: 1896354070}
 --- !u!1 &724697021
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +605,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832870868}
   m_CullTransparentMesh: 1
+--- !u!1 &1896354068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1435847330664235346, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+  m_PrefabInstance: {fileID: 1435847330851718648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1896354070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+  m_PrefabInstance: {fileID: 1435847330851718648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896354068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1896354072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896354068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 610412150}
+          m_TargetAssemblyTypeName: Inibuton, Assembly-CSharp
+          m_MethodName: changeOnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 610412150}
+          m_TargetAssemblyTypeName: Inibuton, Assembly-CSharp
+          m_MethodName: changeOnExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2132423798
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,8 +832,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 610412150}
     - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5781002199562029878, guid: b5336a45e856aa54c95ad6c7c28ec0d3, type: 3}
+      objectReference: {fileID: 21300000, guid: 179bc46a43e495145b3bfa5faa360be6, type: 3}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235350, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
