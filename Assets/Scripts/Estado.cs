@@ -400,6 +400,10 @@ public class Estado : ImmediateModeShapeDrawer
     {
         DOTween.To(() => sprites[0].gameObject.GetComponent<SpriteRenderer>().color, x => sprites[0].gameObject.GetComponent<SpriteRenderer>().color = x, novaCor, stepTime);
     }
+    public void ChangeCorTXT(Color novaCor)
+    {
+        DOTween.To(() => sprites[4].gameObject.GetComponent<TMP_Text>().color, x => sprites[4].gameObject.GetComponent<TMP_Text>().color = x, novaCor, stepTime);
+    }
 
     private void Sinalizador(string type, bool value)
     {

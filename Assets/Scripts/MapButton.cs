@@ -16,6 +16,15 @@ public class MapButton : MonoBehaviour
 
     public TMP_Text map2Text;
     public Image map2Image;
+
+
+    public bool showingHomicide = true;
+
+    public Sprite alternarClaro;
+    public Sprite alternarEscuro;
+    public Image buttonImage;
+    public Image buttonText;
+
     void Update()
     {
         if (map1Ativado)
@@ -32,10 +41,24 @@ public class MapButton : MonoBehaviour
             map2Text.color = ativadoColor;
             map2Image.color = ativadoColor;
         }
+
+        if (showingHomicide)
+        {
+
+        }
     }
 
     public void UpdateAtivado(bool value)
     {
         map1Ativado = value;
+    }
+
+    public void ChangeSpriteEnter()
+    {
+        buttonImage.sprite = alternarEscuro;
+    }
+    public void ChangeSpriteExit()
+    {
+        buttonImage.sprite = alternarClaro;
     }
 }
