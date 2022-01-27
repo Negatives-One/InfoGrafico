@@ -4755,7 +4755,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 0, z: -2.95, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17086,6 +17086,7 @@ MonoBehaviour:
   Brasil: {fileID: 1338728405}
   claro: {r: 0.9843138, g: 0.74509805, b: 0.28627452, a: 1}
   escuro: {r: 0.93333334, g: 0.3764706, b: 0.007843137, a: 1}
+  legendaTransparency: 0
   legendaRects:
   - {fileID: 501639048}
   - {fileID: 1416421610}

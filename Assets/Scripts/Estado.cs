@@ -177,11 +177,11 @@ public class Estado : ImmediateModeShapeDrawer
         linha = transform.parent.gameObject.GetComponent<Polyline>();
         linha.SortingOrder = -3;
         linha.Thickness = 0.06f;
-        linha.Color = Color.yellow;
+        linha.Color = new Color(0.93333f, 0.37647f, 0.00784f);
 
         for (int p = 0; p < linha.points.Count; p++)
         {
-            linha.points[p] = new PolylinePoint(linha.points[p].point, Color.yellow, linha.points[p].thickness);
+            linha.points[p] = new PolylinePoint(linha.points[p].point, new Color(0.93333f, 0.37647f, 0.00784f), linha.points[p].thickness);
         }
         Reiniciar();
         Load();
@@ -280,7 +280,7 @@ public class Estado : ImmediateModeShapeDrawer
         goSequence.Append(DOTween.To(() => cr.transform.localScale, x => cr.transform.localScale = x, Vector3.one, stepTime));
         //returnSequence.Append(cr.transform.DOScale(Vector3.one, stepTime));
 
-        goSequence.Append(DOTween.To(() => disc.Color, x => disc.Color = x, Color.yellow, 0.01f));
+        goSequence.Append(DOTween.To(() => disc.Color, x => disc.Color = x, new Color(0.93333f, 0.37647f, 0.00784f), 0.01f));
         goSequence.Append(DOTween.To(() => manager.informacao.transparency, x => manager.informacao.transparency = x, 1f, stepTime));
         returnSequence.OnComplete(() => goEnded = true);
         goSequence.Play();
@@ -323,7 +323,7 @@ public class Estado : ImmediateModeShapeDrawer
 
     private void HighPriority()
     {
-        DOTween.To(() => cor, x => cor = x, Color.yellow, stepTime);
+        DOTween.To(() => cor, x => cor = x, new Color(0.90980f, 0.78824f, 0.14902f), stepTime);
         DOTween.To(() => texto.color, x => texto.color = x, new Color(0.90980f, 0.78824f, 0.14902f, 1f), stepTime);
         linha.SortingOrder = 10;
         foreach (Transform t in sprites)
