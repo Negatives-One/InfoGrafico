@@ -860,8 +860,16 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_RaycastPadding.y
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435847330664235349, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
+      propertyPath: m_RaycastPadding.z
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1435847330664235350, guid: b7f33d089873ab34c99ef8006d3f462d, type: 3}
       propertyPath: m_CullTransparentMesh
