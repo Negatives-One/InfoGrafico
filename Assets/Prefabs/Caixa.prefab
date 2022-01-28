@@ -305,9 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0beea25d0b269d44e8e593149c4e0aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {r: 0.15686275, g: 0.25490198, b: 0.5921569, a: 1}
-  highlightedColor: {r: 0.32941177, g: 0.4392157, b: 0.81960785, a: 1}
-  pressedColor: {r: 0.06666667, g: 0.11764706, b: 0.29411766, a: 1}
+  normalColor: {r: 0.9098039, g: 0.7882353, b: 0.14901961, a: 1}
+  highlightedColor: {r: 0.9339623, g: 0.85879374, b: 0.47138664, a: 1}
+  pressedColor: {r: 0.7830189, g: 0.68091494, b: 0.14404595, a: 1}
   cr: {fileID: 0}
   text: {fileID: 755484400997742092}
   is2016: 0
@@ -628,9 +628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0beea25d0b269d44e8e593149c4e0aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {r: 0.15686275, g: 0.25490198, b: 0.5921569, a: 1}
-  highlightedColor: {r: 0.32907617, g: 0.4398147, b: 0.8207547, a: 1}
-  pressedColor: {r: 0.06759523, g: 0.11823888, b: 0.2924528, a: 1}
+  normalColor: {r: 0.9098039, g: 0.7882353, b: 0.14901961, a: 1}
+  highlightedColor: {r: 0.9339623, g: 0.85879374, b: 0.47138664, a: 1}
+  pressedColor: {r: 0.7830189, g: 0.68091494, b: 0.14404595, a: 1}
   cr: {fileID: 0}
   text: {fileID: 755484400713360138}
   is2016: 0
